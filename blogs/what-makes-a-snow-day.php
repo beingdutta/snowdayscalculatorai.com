@@ -3,22 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="It takes more than a few snowflakes to cause a snow day. Explore the decision-making process, from road safety and timing to historical trends." />
   <title>What Makes a School Decide to Have a Snow Day? | SnowDay Calculator</title>
 
   <link rel="icon" href="/assets/site-icon-apt.png" type="image/x-icon" />
   <link rel="stylesheet" href="/styles/index.css" />
-  <link rel="stylesheet" href="/styles/footer.css" />
   <link rel="stylesheet" href="/styles/article.css" />
+
+  <!-- SEO: Article Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "What Makes a School Decide to Have a Snow Day?",
+    "image": "https://snowdayscalculatorai.com/assets/us-map.webp",
+    "author": {
+      "@type": "Organization",
+      "name": "SnowDay Calculator AI"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "SnowDay Calculator AI",
+      "logo": { "@type": "ImageObject", "url": "https://snowdayscalculatorai.com/assets/site-icon-apt.png" }
+    },
+    "datePublished": "2025-04-30"
+  }
+  </script>
 </head>
 
 <body>
-  <header class="header">
-    <h1>
-        <a href="/" style="color: inherit; text-decoration: none;">
-            ❄️ SnowDay Calculator AI
-        </a>
-    </h1>
-  </header>
+  <?php include __DIR__ . '/../navigations/header.php'; ?>
 
   <main class="article-wrapper">
     <img src="/assets/us-map.webp" alt="Winter storm map affecting schools" class="article-map" />
@@ -29,7 +43,7 @@
       <p>
         Ever wonder what actually leads a school district to call off classes for snow?
         It's not just about how many inches fall overnight. School administrators must
-        weigh a number of factors—many of which can be unpredictable. And that’s exactly
+        weigh a number of factors many of which can be unpredictable. And that’s exactly
         what tools like the <em>Snow Day Calculator</em> try to replicate using data.
       </p>
 
@@ -41,7 +55,7 @@
         district-wide closures.
       </p>
       <p>
-        This is where an <em>AI snow day calculator</em> becomes helpful—it doesn't just
+        This is where an <em>AI snow day calculator</em> becomes helpful it doesn't just
         count snowfall, but also factors in ice alerts, wind chill, and timing. The goal?
         Replicate the real decisions superintendents face at 4 a.m.
       </p>
@@ -66,8 +80,8 @@
         of snow. In other areas, that much snow would certainly mean closure.
       </p>
       <p>
-        That’s why the <em>snow day calculator Michigan</em> model—and our Canada version
-        too—use past decisions to personalize your <em>snow day percentage calculator</em>
+        That’s why the <em>snow day calculator Michigan</em> model and our Canada version
+        too use past decisions to personalize your <em>snow day percentage calculator</em>
         result.
       </p>
 
@@ -78,7 +92,7 @@
         For <em>college campuses</em>, pedestrian safety plays a huge role.
       </p>
       <p>
-        The <em>snow day calculator college</em> model evaluates more than road safety—it
+        The <em>snow day calculator college</em> model evaluates more than road safety it
         considers campus walkability, dorm status, and staff availability.
       </p>
 
@@ -99,7 +113,7 @@
       <p>
         In short: it’s a mix of data, judgment, and local norms. There’s no universal
         rule, but with the <em>snow day chance calculator</em>, you get a highly informed
-        estimate tailored to your ZIP code—or full address.
+        estimate tailored to your ZIP code or full address.
       </p>
       <p>
         For 2025 and beyond, our <em>snow day calculator formula</em> will keep learning.
@@ -130,26 +144,14 @@
     </section>
   </main>
 
-  <footer class="footer">
-    <nav>
-        <a href="/">Home</a>
-        <a href="#">Blogs</a>
-        <a href="#">About&nbsp;Us</a>
-        <a href="#">Contact&nbsp;Us</a>
-        <a href="#">Terms&nbsp;&amp;&nbsp;Conditions</a>
-        <a href="#">Privacy&nbsp;Policy</a>
-    </nav>
-    <br>
-    <p>&copy; 2022 Snowday AI Calculator. All rights reserved.</p>
-  </footer>
-
+  <?php include __DIR__ . '/../navigations/footer.php'; ?>
   <script>
     function sendFeedback(emoji) {
       const msg = document.getElementById('thankYouMsg');
       msg.textContent =
         emoji === '👍' ? 'Thanks! We\'re glad it helped. 😊' :
         emoji === '🙂' ? 'Thanks for the feedback! We’ll keep improving.' :
-                         'Sorry it missed the mark — your feedback helps us do better.';
+                         'Sorry it missed the mark   your feedback helps us do better.';
       document.querySelectorAll('.emoji-btn').forEach(btn => btn.disabled = true);
     }
   </script>

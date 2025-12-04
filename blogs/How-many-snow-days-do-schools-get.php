@@ -3,23 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Discover how many snow days schools typically get per year and what factors influence the number of closures, from location to district policies." />
   <title>How Many Snow Days Do Schools Get? | SnowDay Calculator</title>
 
   <link rel="icon" href="/assets/site-icon-apt.png" type="image/x-icon" />
   <link rel="stylesheet" href="/styles/index.css" />
-  <link rel="stylesheet" href="/styles/footer.css" />
   <link rel="stylesheet" href="/styles/article.css" />
+
+  <!-- SEO: Article Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How Many Snow Days Do Schools Get?",
+    "image": "https://snowdayscalculatorai.com/assets/us-map.webp",
+    "author": {
+      "@type": "Organization",
+      "name": "SnowDay Calculator AI"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "SnowDay Calculator AI",
+      "logo": { "@type": "ImageObject", "url": "https://snowdayscalculatorai.com/assets/site-icon-apt.png" }
+    },
+    "datePublished": "2025-05-01"
+  }
+  </script>
 </head>
 
 <body>
 
-  <header class="header">
-    <h1>
-        <a href="/" style="color: inherit; text-decoration: none;">
-            ❄️ SnowDay Calculator AI
-        </a>
-    </h1>
-  </header>
+  <?php include __DIR__ . '/../navigations/header.php'; ?>
 
   <main class="article-wrapper">
     <img src="/assets/us-map.webp" alt="Map showing average annual snow days in the U.S." class="article-map" />
@@ -59,7 +73,7 @@
       <h3>How Schools Set Snow Day Limits</h3>
       <p>
         Most school districts build in a set number of “emergency closure days” into their academic calendars—
-        typically between <strong>3 and 5 per year</strong>.
+        typically between 3 and 5 per year.
         If more snow days are needed, schools may have to make up days later in spring or shorten holidays.
       </p>
       <p>
@@ -81,7 +95,7 @@
 
       <h3>How Accurate Is the Snow Day Calculator?</h3>
       <p>
-        Our model is one of the <strong>most accurate snow day calculators</strong> online,
+        Our model is one of the most accurate snow day calculators online,
         with up to 90% accuracy in tested regions. If you've wondered,
         <em>"Is the snow day calculator accurate?"</em> — the answer is yes.
         It improves with each snow season, especially with the updated
@@ -128,19 +142,7 @@
     </section>
   </main>
 
-  <footer class="footer">
-      <nav>
-          <a href="/">Home</a>
-          <a href="#">Blogs</a>
-          <a href="#">About&nbsp;Us</a>
-          <a href="#">Contact&nbsp;Us</a>
-          <a href="#">Terms&nbsp;&amp;&nbsp;Conditions</a>
-          <a href="#">Privacy&nbsp;Policy</a>
-      </nav>
-      <br>
-      <p>&copy; 2022 Snowday AI Calculator. All rights reserved.</p>
-  </footer>
-
+  <?php include __DIR__ . '/../navigations/footer.php'; ?>
   <script>
     function sendFeedback(emoji) {
       const msg = document.getElementById('thankYouMsg');

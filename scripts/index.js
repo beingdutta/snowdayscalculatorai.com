@@ -125,6 +125,7 @@ async function calculateProbability() {
   currentAddress = addr;  // remember what the user entered
 
   loader.style.display = "flex";
+  const startTime = Date.now();
   try {
     const periods = await callApiChain(addr);
     currentForecast = processForecast(periods);
@@ -149,6 +150,7 @@ async function calculateProbability() {
 
     document.getElementById("results").style.display = "block";
     showInputs(false);
+    document.getElementById("incomingQueries").style.display = "none";
 
     // inject fresh JSON-LD for structured WeatherForecast
     injectStructuredData(currentForecast, currentAddress);
@@ -166,6 +168,11 @@ async function calculateProbability() {
     document.getElementById("forecastResults").innerHTML =
       `<div class="forecast-card">❌ Error: ${e}</div>`;
   } finally {
+    const elapsedTime = Date.now() - startTime;
+    const remainingTime = 7000 - elapsedTime;
+    if (remainingTime > 0) {
+      await new Promise(resolve => setTimeout(resolve, remainingTime));
+    }
     loader.style.display = "none";
   }
 }
@@ -181,6 +188,7 @@ function resetCalculator() {
   document.getElementById("forecastResults").innerHTML = "";
   document.getElementById("results").style.display      = "none";
   showInputs(true);
+  document.getElementById("incomingQueries").style.display = "block";
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 

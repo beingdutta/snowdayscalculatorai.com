@@ -1,0 +1,20 @@
+# --- Custom Error Page ---
+ErrorDocument 404 /404.php
+
+# Enables the URL rewriting engine
+RewriteEngine On
+
+# Ensure that requests for directories are handled correctly
+DirectoryIndex index.php
+
+# --- Rules for "Pretty URLs" (removing .php extension) ---
+
+# 1. Externally redirect any direct requests for .php files to the clean URL
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.php[\s?] [NC]
+RewriteRule ^(.+?)\.php$ /$1 [R=301,L]
+
+# 2. Internally rewrite the clean URL to the actual .php file
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*?)/?$ $1.php [L]

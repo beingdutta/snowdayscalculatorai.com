@@ -3,22 +3,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learn about the factors that determine a school closure, from inches of snow to ice and wind chill. Find out how our calculator predicts snow days." />
   <title>How Much Snow Does It Take to Cancel School? | SnowDay Calculator</title>
 
   <link rel="icon" href="/assets/site-icon-apt.png" type="image/x-icon" />
   <link rel="stylesheet" href="/styles/index.css" />
   <link rel="stylesheet" href="/styles/footer.css" />
   <link rel="stylesheet" href="/styles/article.css" />
+  <link rel="stylesheet" href="/styles/header.css" />
+
+  <!-- SEO: Article Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How Much Snow Does It Take to Cancel School?",
+    "image": "https://snowdayscalculatorai.com/assets/us-map.webp",
+    "author": {
+      "@type": "Organization",
+      "name": "SnowDay Calculator AI"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "SnowDay Calculator AI",
+      "logo": { "@type": "ImageObject", "url": "https://snowdayscalculatorai.com/assets/site-icon-apt.png" }
+    },
+    "datePublished": "2025-04-30"
+  }
+  </script>
 </head>
 
 <body>
-  <header class="header">
-    <h1>
-        <a href="/" style="color: inherit; text-decoration: none;">
-            ❄️ SnowDay Calculator AI
-        </a>
-    </h1>
-  </header>
+  <?php include __DIR__ . '/../navigations/header.php'; ?>
 
   <main class="article-wrapper">
     <img src="/assets/us-map.webp" alt="Snow map showing school closure probabilities" class="article-map" />
@@ -28,7 +44,7 @@
     <article class="article-body">
       <p>
         Every winter, students across the U.S. and Canada wake up and ask the same question:
-        “<strong>How much snow does it take to cancel school?</strong>”
+        “How much snow does it take to cancel school?”
         The answer depends on where you live, how your district operates, and what weather conditions are coming your way.
         Luckily, tools like the <em>snow day calculator</em> can help break it down.
       </p>
@@ -36,7 +52,7 @@
       <h3>There’s No Universal Number</h3>
       <p>
         While 3–6 inches of snow might seem like a likely threshold, there's no nationwide rule.
-        Some schools close at just 1 inch of snow—others stay open with 7+ inches.
+        Some schools close at just 1 inch of snow  others stay open with 7+ inches.
         Factors like road clearing, ice, temperature, wind chill, and timing all play a role.
       </p>
       <p>
@@ -47,13 +63,13 @@
       <h3>Why Location Matters</h3>
       <p>
         In snowy northern states like Minnesota or Michigan, districts are well-prepared and less likely to close.
-        But in places like Georgia or Tennessee, even a light snow dusting—or a forecast of freezing rain—
+        But in places like Georgia or Tennessee, even a light snow dusting  or a forecast of freezing rain  
         can shut schools down. The <em>snow day calculator Michigan</em> uses different thresholds than
         the <em>snow day calculator Canada</em> or southern states.
       </p>
       <p>
         The <em>snow day calculator college</em> version also takes pedestrian traffic and campus infrastructure
-        into account—ideal for students at universities and colleges across the U.S.
+        into account  ideal for students at universities and colleges across the U.S.
       </p>
 
       <h3>How the Snow Day Calculator Predicts Closures</h3>
@@ -64,7 +80,7 @@
       </p>
       <p>
         Whether you’re using the <em>snow.day calculator</em>, <em>snow day calculator 2024</em>,
-        or the newest <em>snow day calculator 2025</em>, the engine behind it remains the same—
+        or the newest <em>snow day calculator 2025</em>, the engine behind it remains the same  
         smart, fast, and incredibly accurate.
       </p>
 
@@ -82,12 +98,12 @@
 
       <h3>How Accurate Is the Snow Day Calculator?</h3>
       <p>
-        You might be wondering: <strong>“Is snow day calculator accurate?”</strong>
-        Yes—it’s one of the most accurate tools available. Our <em>snow day predictor calculator</em>
+        You might be wondering: “Is snow day calculator accurate?”
+        Yes  it’s one of the most accurate tools available. Our <em>snow day predictor calculator</em>
         reaches up to 90% accuracy, improving with every new storm.
       </p>
       <p>
-        Whether you’re searching for the <em>best snow day calculator</em>, the <em>most accurate snow day calculator</em>,
+        Whether you’re searching for the best snow day calculator, the most accurate snow day calculator,
         or just want a quick <em>snow day percentage calculator</em>, our tool delivers trustworthy results.
       </p>
 
@@ -126,14 +142,6 @@
   </main>
 
   <footer class="footer">
-    <nav>
-        <a href="/">Home</a>
-        <a href="#">Blogs</a>
-        <a href="#">About&nbsp;Us</a>
-        <a href="#">Contact&nbsp;Us</a>
-        <a href="#">Terms&nbsp;&amp;&nbsp;Conditions</a>
-        <a href="#">Privacy&nbsp;Policy</a>
-    </nav>
     <br>
     <p>&copy; 2025 Snowday AI Calculator. All rights reserved.</p>
   </footer>
@@ -145,7 +153,7 @@
       msg.textContent =
         emoji === '👍' ? 'Thanks! We\'re glad it helped. 😊' :
         emoji === '🙂' ? 'Thanks for the feedback! We’ll keep improving.' :
-                         'Sorry it missed the mark — your feedback helps us do better.';
+                         'Sorry it missed the mark    your feedback helps us do better.';
 
       document.querySelectorAll('.emoji-btn').forEach(btn => btn.disabled = true);
     }

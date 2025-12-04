@@ -1,0 +1,159 @@
+/* Styles for simple, text-heavy pages like About, Contact, Privacy, etc. */
+
+.static-page-wrapper {
+    max-width: 800px;
+    margin: 3rem auto 4rem;
+    padding: 2rem;
+    background: var(--card-bg);
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0,0,0,.07);
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.static-page-wrapper h1 {
+    color: var(--primary);
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 0.5rem;
+}
+
+.static-page-wrapper h2 {
+    color: var(--secondary);
+    font-size: 1.6rem;
+    margin: 2rem 0 1rem;
+}
+
+.static-page-wrapper ul {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+.static-page-wrapper a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.static-page-wrapper a:hover {
+    text-decoration: underline;
+}
+
+.last-updated {
+    font-style: italic;
+    color: #777;
+    margin-bottom: 2rem;
+}
+
+/* --- Contact Form Styles --- */
+.contact-form {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.form-success {
+    color: #00796B; /* Teal color for success */
+    background-color: #e0f2f1;
+    padding: 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.form-error {
+    color: #B71C1C; /* Red color for error */
+    background-color: #ffebee;
+    padding: 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.form-submit-btn {
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    align-self: flex-start; /* Align button to the left */
+}
+
+.form-submit-btn:hover {
+    background: var(--secondary);
+}
+
+/* --- 404 Page Styles --- */
+.not-found-wrapper {
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.not-found-wrapper h1 {
+    font-size: 6rem; /* Big 404 number */
+    color: var(--primary);
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.not-found-wrapper h2 {
+    font-size: 1.8rem;
+    color: var(--secondary);
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.not-found-wrapper .home-button {
+    background: var(--primary);
+    color: #fff;
+    padding: 1rem 2.5rem;
+    border-radius: 50px; /* Pill shape */
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    display: inline-block;
+    display: inline-flex; /* Use flexbox for alignment */
+    align-items: center;
+    gap: 0.75rem; /* Space between icon and text */
+}
+
+.not-found-wrapper .home-button:hover {
+    background-color: var(--secondary);
+    transform: translateY(-3px); /* Lift effect */
+    box-shadow: 0 6px 20px rgba(0, 80, 150, 0.2);
+}
+
+.not-found-wrapper .home-button svg {
+    vertical-align: middle;
+}
