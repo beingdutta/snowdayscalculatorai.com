@@ -139,16 +139,6 @@ button:hover{filter:brightness(.9)}       /* darker on hover */
     width:0%
 }
 
-/* advertisement placeholder */
-.ad-space{
-    height:100px;
-    background:rgba(0,0,0,.05);
-    margin:2rem 0;
-    border-radius:8px;
-    display:flex;align-items:center;justify-content:center;
-    opacity:.8;color:var(--text)
-}
-
 /* FAQ */
 .faq-item{margin:.5rem 0;background:var(--card-bg);
           border-radius:8px;box-shadow:0 2px 4px rgba(0,0,0,.05)}
@@ -156,8 +146,87 @@ button:hover{filter:brightness(.9)}       /* darker on hover */
 .faq-answer{display:none;padding:0 1rem 1rem;border-top:1px solid var(--accent)}
 .hidden-section{display:none !important;height:0;overflow:hidden}
 
+/* --- Ad Popup Styles --- */
+.popup-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: none; /* Initially hidden */
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    padding: 1rem;
+    animation: fadeIn 0.3s ease;
+}
+
+.popup-box {
+    background: #fff;
+    border-radius: 16px;
+    padding: 2rem;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    text-align: center;
+    border-top: 5px solid var(--primary);
+    position: relative; /* For positioning the close button */
+}
+
+.popup-box h3 {
+    color: var(--primary);
+    font-size: 1.6rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.popup-box p {
+    color: var(--text);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.popup-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.popup-btn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 2px solid transparent;
+}
+.popup-btn.primary {
+    background: var(--primary);
+    color: #fff;
+    text-decoration: none;
+}
+.popup-btn.secondary {
+    background: #f0f0f0;
+    color: var(--text);
+}
+
+.popup-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    color: #aaa;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0;
+    width: auto; /* Override default button width */
+    margin: 0; /* Override default button margin */
+}
 
 @media(max-width:768px){
     .input-section{grid-template-columns:1fr;grid-template-rows:auto 1px auto}
     .divider{width:100%;height:1px}
+    .popup-box { padding: 1.5rem; }
+    .popup-box h3 { font-size: 1.4rem; }
 }

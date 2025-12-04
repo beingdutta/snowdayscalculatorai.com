@@ -186,8 +186,6 @@
 
             
 
-            <div class="ad-space"></div>
-
             <!-------------------------- FAQ ---------------------------->
             <div class="faq-section">
                 <h2>❓ Frequently Asked Questions</h2>
@@ -210,6 +208,20 @@
             </div>
         </div>
         <!-- /container -->
+
+        <!-- Ad Popup -->
+        <div class="popup-overlay" id="adPopupOverlay">
+            <div class="popup-box">
+                <button class="popup-close-btn" id="crossClosePopup" aria-label="Close">&times;</button>
+                <h3>Support Local & Get Noticed!</h3>
+                <p>Do you run an Airbnb, a cozy café, or a snow-related service? We’d love to support local businesses like yours. List your offering on our site’s front page and enjoy <strong>15 days completely free</strong>.</p>
+                <p>After the trial, you can stay featured for a small, budget-friendly charge. Let’s help your business <br><br> <u>Shine this snow season together.</u></p>
+                <div class="popup-buttons">
+                    <a href="/contact" class="popup-btn primary">Reach out to us</a>
+                    <button class="popup-btn secondary" id="closeAdPopup">OK</button>
+                </div>
+            </div>
+        </div>
 
         <!-- footer -->
         <?php include __DIR__ . '/navigations/footer.php'; ?>
@@ -275,7 +287,32 @@
                 clearInterval(messageInterval);
             };
 
-            document.addEventListener('DOMContentLoaded', fetchLocationAndGreet);
+            // 3. Ad Popup Logic
+            function initializeAdPopup() {
+                const popupOverlay = document.getElementById('adPopupOverlay');
+                const closeButton = document.getElementById('closeAdPopup');
+                const crossCloseButton = document.getElementById('crossClosePopup');
+
+                // Show popup after 6 seconds
+                setTimeout(() => {
+                    popupOverlay.style.display = 'flex';
+                }, 6000);
+
+                // Close popup when "OK" is clicked
+                closeButton.addEventListener('click', () => {
+                    popupOverlay.style.display = 'none';
+                });
+
+                // Close popup when "X" is clicked
+                crossCloseButton.addEventListener('click', () => {
+                    popupOverlay.style.display = 'none';
+                });
+            }
+
+            document.addEventListener('DOMContentLoaded', () => {
+                fetchLocationAndGreet();
+                initializeAdPopup();
+            });
         </script>
 
     </body>
