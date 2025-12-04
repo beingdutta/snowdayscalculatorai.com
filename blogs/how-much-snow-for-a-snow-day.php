@@ -16,7 +16,7 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "How Much Snow Does It Take to Have a Snow Day at School?",
-    "image": "https://snowdayscalculatorai.com/assets/us-map.webp",
+    "image": "https://images.unsplash.com/photo-1614734292826-78010d348dfc?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "author": {
       "@type": "Organization",
       "name": "SnowDay Calculator AI"
@@ -34,7 +34,7 @@
 <body>
   <?php include __DIR__ . '/../navigations/header.php'; ?>
   <main class="article-wrapper">
-    <img src="/assets/us-map.webp" alt="Snowy school map of the U.S." class="article-map" />
+    <img src="https://images.unsplash.com/photo-1614734292826-78010d348dfc?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Snowy school map of the U.S." class="article-map" />
 
     <h2 class="article-title">How Much Snow Does It Take to Have a Snow Day at School?</h2>
 

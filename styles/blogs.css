@@ -97,6 +97,24 @@
     font-weight: 600;
 }
 
+/* Image attribution notice */
+.image-attribution {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e0e0e0;
+    font-size: 0.9rem;
+    color: #777;
+}
+.image-attribution a {
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: none;
+}
+.image-attribution a:hover {
+    text-decoration: underline;
+}
+
 /* responsiveness */
 @media(max-width:600px){
     .blog-card{padding:1.25rem 1.5rem}

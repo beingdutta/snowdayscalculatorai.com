@@ -16,7 +16,7 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "How Many Snow Days Do Schools Get?",
-    "image": "https://snowdayscalculatorai.com/assets/us-map.webp",
+    "image": "https://plus.unsplash.com/premium_photo-1701201194704-8b7b8e21c8d2?q=80&w=869&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "author": {
       "@type": "Organization",
       "name": "SnowDay Calculator AI"
@@ -36,7 +36,7 @@
   <?php include __DIR__ . '/../navigations/header.php'; ?>
 
   <main class="article-wrapper">
-    <img src="/assets/us-map.webp" alt="Map showing average annual snow days in the U.S." class="article-map" />
+    <img src="https://plus.unsplash.com/premium_photo-1701201194704-8b7b8e21c8d2?q=80&w=869&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Map showing average annual snow days in the U.S." class="article-map" />
 
     <h2 class="article-title">How Many Snow Days Do Schools Get?</h2>
 
