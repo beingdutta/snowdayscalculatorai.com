@@ -42,7 +42,7 @@
 
     <article class="article-body">
       <p>
-        Snow days are a winter tradition—but how many do schools actually get each year?
+        Snow days are a winter tradition but how many do schools actually get each year?
         The answer depends on your location, weather patterns, and district policies.
         Thanks to tools like the <em>snow day calculator</em>, students and parents can now get clearer, faster predictions about closures before they happen.
       </p>
@@ -54,7 +54,7 @@
         while southern states often see one or none.
       </p>
       <p>
-        With the <em>AI snow day calculator</em>, you can track and estimate how many snow days your district may get—
+        With the <em>AI snow day calculator</em>, you can track and estimate how many snow days your district may get 
         based on historical data and live weather inputs.
       </p>
 
@@ -66,13 +66,13 @@
         <em>snow day calculator Canada</em> or Florida.
       </p>
       <p>
-        College campuses, too, use separate models—like the <em>snow day calculator college</em>,
+        College campuses, too, use separate models like the <em>snow day calculator college</em>,
         which accounts for campus walkability and snow-removal systems.
       </p>
 
       <h3>How Schools Set Snow Day Limits</h3>
       <p>
-        Most school districts build in a set number of “emergency closure days” into their academic calendars—
+        Most school districts build in a set number of “emergency closure days” into their academic calendars 
         typically between 3 and 5 per year.
         If more snow days are needed, schools may have to make up days later in spring or shorten holidays.
       </p>
@@ -97,12 +97,12 @@
       <p>
         Our model is one of the most accurate snow day calculators online,
         with up to 90% accuracy in tested regions. If you've wondered,
-        <em>"Is the snow day calculator accurate?"</em> — the answer is yes.
+        <em>"Is the snow day calculator accurate?"</em>   the answer is yes.
         It improves with each snow season, especially with the updated
         <em>snow day calculator 2025</em> now available.
       </p>
       <p>
-        It’s more than just a guess—it’s a smart, predictive engine.
+        It’s more than just a guess it’s a smart, predictive engine.
         So whether you’re wondering about the <em>snow day calculator formula</em> or just asking,
         <em>“how many snow days will we get?”</em>, this is your tool.
       </p>
@@ -116,7 +116,7 @@
       </p>
       <p>
         Try the <em>best snow day calculator</em> today, and find out why thousands trust it every stormy morning.
-        Accurate, fast, and free—it’s everything you need to plan your next snow day.
+        Accurate, fast, and free it’s everything you need to plan your next snow day.
       </p>
     </article>
 
@@ -149,7 +149,7 @@
       msg.textContent =
         emoji === '👍' ? 'Thanks! We\'re glad it helped. 😊' :
         emoji === '🙂' ? 'Thanks for the feedback! We’ll keep improving.' :
-                         'Sorry it missed the mark — your feedback helps us do better.';
+                         'Sorry it missed the mark   your feedback helps us do better.';
 
       document.querySelectorAll('.emoji-btn').forEach(btn => btn.disabled = true);
     }
