@@ -28,7 +28,7 @@
       "name": "SnowDay Calculator AI",
       "logo": { "@type": "ImageObject", "url": "https://snowdayscalculatorai.com/assets/site-icon-apt.png" }
     },
-    "datePublished": "2025-05-01"
+    "datePublished": "2025-12-05"
   }
   </script>
 </head>

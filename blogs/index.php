@@ -32,7 +32,7 @@
                     <h3>What is a Snow Day?</h3>
                     <p>One of the most common winter questions from students and parents alike: “How many inches of snow does it take to cancel school?” …</p>
                     <div class="blog-card-footer">
-                        <span>Published: May 1, 2025 • Read More →</span>
+                        <span>Published: Dec 5, 2025 • Read More →</span>
                     </div>
                 </div>
             </a>
@@ -44,7 +44,7 @@
                     <h3>What makes a Snow Day?</h3>
                     <p>Ever wonder what actually leads a school district to call off classes for snow? It's not just about how many inches fall overnight. School administrators must …</p>
                     <div class="blog-card-footer">
-                        <span>Published: April 30, 2025 • Read More →</span>
+                        <span>Published: Dec 4, 2025 • Read More →</span>
                     </div>
                 </div>
             </a>
@@ -56,7 +56,7 @@
                     <h3>How Snow Day calculator works?</h3>
                     <p>A snow day chance calculator is only useful if it knows how your region responds. In places like Michigan or upstate New York, 6 inches of snow may not cancel schools …</p>
                     <div class="blog-card-footer">
-                        <span>Published: April 30, 2025 • Read More →</span>
+                        <span>Published: Dec 3, 2025 • Read More →</span>
                     </div>
                 </div>
             </a>
@@ -68,7 +68,7 @@
                     <h3>How much Snow for a Snow Day?</h3>
                     <p>The truth is, there’s no single number that applies everywhere—but with the help of modern tools like the Snow Day Calculator, you can find out what matters most for your location …</p>
                     <div class="blog-card-footer">
-                        <span>Published: April 30, 2025 • Read More →</span>
+                        <span>Published: Dec 2, 2025 • Read More →</span>
                     </div>
                 </div>
             </a>
@@ -80,7 +80,7 @@
                     <h3>How much Snow does it take to cancel school?</h3>
                     <p>Every winter, students across the U.S. and Canada wake up and ask the same question: “How much snow does it take to cancel school?” The answer depends on where you live, how your district operates …</p>
                     <div class="blog-card-footer">
-                        <span>Published: April 30, 2025 • Read More →</span>
+                        <span>Published: Dec 2, 2025 • Read More →</span>
                     </div>
                 </div>
             </a>
@@ -92,7 +92,7 @@
                     <h3>How many Snow Days do schools get?</h3>
                     <p> Snow days are a winter tradition—but how many do schools actually get each year? The answer depends on your location, weather patterns, and district policies. Thanks to tools like the snow day calculator…</p>
                     <div class="blog-card-footer">
-                        <span>Published: May 1, 2025 • Read More →</span>
+                        <span>Published: Dec 1, 2025 • Read More →</span>
                     </div>
                 </div>
             </a>
