@@ -33,6 +33,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="icon" href="/assets/site-icon-apt.png" type="image/x-icon" />
     <link rel="stylesheet" href="/styles/index.css" />
     <link rel="stylesheet" href="/styles/static.css" />
+
+    <!-- AdSense -->
+    <?php include __DIR__ . '/includes/ads.php'; ?>
 </head>
 <body>
     <?php include __DIR__ . '/navigations/header.php'; ?>

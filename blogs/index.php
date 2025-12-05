@@ -13,6 +13,9 @@
 
     <!-- blog-page specific styles -->
     <link rel="stylesheet" href="/styles/blogs.css" />
+
+    <!-- AdSense -->
+    <?php include __DIR__ . '/../includes/ads.php'; ?>
 </head>
 
 <body>

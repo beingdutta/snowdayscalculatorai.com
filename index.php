@@ -24,6 +24,9 @@
             gtag('config', 'G-PXCGN0JB4F');
         </script>
 
+        <!-- AdSense -->
+        <?php include __DIR__ . '/includes/ads.php'; ?>
+
         <!-- SEO: JSON-LD for Website and Organization -->
         <script type="application/ld+json">
         {

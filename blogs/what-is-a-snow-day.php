@@ -12,6 +12,9 @@
   <link rel="stylesheet" href="/styles/article.css" />
   <link rel="stylesheet" href="/styles/header.css" />
 
+  <!-- AdSense -->
+  <?php include __DIR__ . '/../includes/ads.php'; ?>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
