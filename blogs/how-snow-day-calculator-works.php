@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="How does a Snow Day Calculator actually predict school closures? We break down the algorithm, the weather APIs, and the 'Wimpiness Score' logic." />
-  <title>How Does the Snow Day Calculator Work? The Science Inside | SnowDay Calculator</title>
+  <title>How Does the Snow Day Calculator Work? An Inside Look</title>
 
   <link rel="icon" href="/assets/site-icon-apt.png" type="image/x-icon" />
   <link rel="stylesheet" href="/styles/index.css" />
@@ -17,7 +17,7 @@
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "How Does the Snow Day Calculator Work? Deconstructing the Algorithm",
+    "headline": "How Does the Snow Day Calculator Work? An Inside Look",
     "image": "https://plus.unsplash.com/premium_photo-1701201194954-3d9d69991ece?q=80&w=869&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "author": {
       "@type": "Organization",
@@ -76,7 +76,7 @@
   <main class="article-wrapper">
     <img src="https://plus.unsplash.com/premium_photo-1701201194954-3d9d69991ece?q=80&w=869&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Map of the U.S. in winter showing weather patterns" class="article-map" />
 
-    <h1 class="article-title">How Does the Snow Day Calculator Work? The Science Inside the Box</h1>
+    <h1 class="article-title">How Does the Snow Day Calculator Work? An Inside Look</h1>
 
     <article class="article-body">
       <p>

@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="What actually triggers a snow day? It's not just snowfall. Learn about the 4 AM road tests, the ice factor, and how superintendents make the final call." />
-  <title>What Makes a School Decide to Have a Snow Day? | SnowDay Calculator</title>
+  <title>What Makes a School Decide on a Snow Day?</title>
 
   <link rel="icon" href="/assets/site-icon-apt.png" type="image/x-icon" />
   <link rel="stylesheet" href="/styles/index.css" />

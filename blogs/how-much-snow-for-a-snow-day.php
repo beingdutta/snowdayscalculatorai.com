@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="How many inches of snow does it take to cancel school? We break down the regional differences, the impact of ice, and how our calculator predicts the odds." />
-  <title>How Much Snow Does It Take to Have a Snow Day at School? | SnowDay Calculator</title>
+  <meta name="description" content="How many inches of snow does it take to cancel school? From the Snow Belt to the South, learn the real thresholds for a snow day." />
+  <title>How Much Snow for a Snow Day? A Regional Guide</title>
 
   <link rel="icon" href="/assets/site-icon-apt.png" type="image/x-icon" />
   <link rel="stylesheet" href="/styles/index.css" />
@@ -17,7 +17,7 @@
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "How Much Snow Does It Take to Have a Snow Day? The Regional Breakdown",
+    "headline": "How Much Snow for a Snow Day? A Regional Guide",
     "image": "https://images.unsplash.com/photo-1614734292826-78010d348dfc?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "author": {
       "@type": "Organization",
@@ -76,7 +76,7 @@
   <main class="article-wrapper">
     <img src="https://images.unsplash.com/photo-1614734292826-78010d348dfc?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Snowy school bus driving on winter road" class="article-map" />
 
-    <h1 class="article-title">How Much Snow Does It Take to Have a Snow Day? The Regional Breakdown</h1>
+    <h1 class="article-title">How Much Snow for a Snow Day? A Regional Guide</h1>
 
     <article class="article-body">
       <p>

@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="What really causes a snow day? From superintendent conference calls to AI algorithms, learn the complex science behind school closures and how to predict them." />
-  <title>What Is a Snow Day? The Comprehensive Guide</title>
+  <title>What Is a Snow Day? The Science & Logistics of School Closures</title>
 
   <link rel="icon" href="/assets/site-icon-apt.png" type="image/x-icon" />
   <link rel="stylesheet" href="/styles/index.css" />
@@ -19,7 +19,7 @@
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "What Is a Snow Day? The Logistics, Science, and Magic of School Closures",
+    "headline": "What Is a Snow Day? The Science & Logistics of School Closures",
     "image": "https://plus.unsplash.com/premium_photo-1671188533295-ad01d3024a0c?q=80&w=869&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "author": {
       "@type": "Organization",
@@ -78,7 +78,7 @@
   <main class="article-wrapper">
     <img src="https://plus.unsplash.com/premium_photo-1671188533295-ad01d3024a0c?q=80&w=869&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Snowfall probability map across the U.S." class="article-map" />
 
-    <h1 class="article-title">What Is a Snow Day? The Logistics, Science, and Magic Behind the Call</h1>
+    <h1 class="article-title">What Is a Snow Day? The Science & Logistics of School Closures</h1>
 
     <article class="article-body">
       <p>

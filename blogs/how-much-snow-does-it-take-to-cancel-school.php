@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="How many inches of snow does it take to cancel school? From 6 inches in the North to a dusting in the South, learn the real math behind snow days." />
-  <title>How Much Snow Does It Take to Cancel School? | SnowDay Calculator</title>
+  <title>How Much Snow Cancels School? A Guide by Region</title>
 
   <link rel="icon" href="/assets/site-icon-apt.png" type="image/x-icon" />
   <link rel="stylesheet" href="/styles/index.css" />
@@ -19,7 +19,7 @@
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "How Much Snow Does It Take to Cancel School? The Ultimate Guide",
+    "headline": "How Much Snow Cancels School? A Guide by Region",
     "image": "https://plus.unsplash.com/premium_photo-1671004291961-6a773194fd73?q=80&w=869&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "author": {
       "@type": "Organization",
@@ -78,7 +78,7 @@
   <main class="article-wrapper">
     <img src="https://plus.unsplash.com/premium_photo-1671004291961-6a773194fd73?q=80&w=869&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Snow map showing school closure probabilities" class="article-map" />
 
-    <h1 class="article-title">How Much Snow Does It Take to Cancel School? The Ultimate Guide</h1>
+    <h1 class="article-title">How Much Snow Cancels School? A Guide by Region</h1>
 
     <article class="article-body">
       <p>
