@@ -8,6 +8,7 @@
         <meta name="keywords" content="snow day, snow day calculator, snow day calculator accuweather, snow day college calculator, snow day michigan calculator, snow day chance calculator, snow day accurate calculator, snow day chance calculator, snow day predictor calculator, snow day ai calculator, snow day accurate calculator, snow day app calculator, snow day percentage calculator, snow day probability calculator, snow day calculator free, snow day predictor calculator, snow day best calculator">
         <title>SnowDay Calculator – Predict School Closures</title>
         <link rel="icon" href="/assets/site-icon-apt.png" type="image/x-icon" />
+        <link rel="canonical" href="https://snowdayscalculatorai.com/" />
         <link rel="stylesheet" href="/styles/index.css" />
         <link rel="stylesheet" href="/styles/incoming-queries.css" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
@@ -296,7 +297,7 @@
                 // Show popup after 6 seconds
                 setTimeout(() => {
                     popupOverlay.style.display = 'flex';
-                }, 6000);
+                }, 10000);
 
                 // Close popup when "OK" is clicked
                 closeButton.addEventListener('click', () => {
