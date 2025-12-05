@@ -8,12 +8,12 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, .1);
     position: relative; /* For mobile nav positioning */
 }
-.header h1 {
+.header .site-title {
     margin: 0;
     font-size: 1.4rem; /* Adjusted for responsiveness */
     z-index: 10; /* Ensure title is above mobile nav */
 }
-.header h1 a {
+.header .site-title a {
     color: #fff;
     text-decoration: none;
 }
@@ -63,7 +63,7 @@
         padding: 1rem 1.5rem;
         justify-content: center; /* Center the title */
     }
-    .header h1 {
+    .header .site-title {
         font-size: 1.2rem; /* Reduce title size on mobile */
     }
     .header .main-nav { /* Increased specificity */
@@ -93,11 +93,15 @@
 }
 </style>
 <header class="header">
-    <h1>
+    <?php
+    $is_homepage = in_array($_SERVER['REQUEST_URI'], ['/', '/index.php']);
+    $tag = $is_homepage ? 'h1' : 'div';
+    ?>
+    <<?php echo $tag; ?> class="site-title">
         <a href="/">
             SnowDay Calculator AI&nbsp;USA
         </a>
-    </h1>
+    </<?php echo $tag; ?>>
     <nav class="main-nav" id="mainNav">
         <a href="/">Home</a>
         <a href="/blogs">Blogs</a>
