@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="What really causes a snow day? From superintendent conference calls to AI algorithms, learn the complex science behind school closures and how to predict them." />
-  <title>What Is a Snow Day? The Comprehensive Guide | SnowDay Calculator</title>
+  <title>What Is a Snow Day? The Comprehensive Guide</title>
 
   <link rel="icon" href="/assets/site-icon-apt.png" type="image/x-icon" />
   <link rel="stylesheet" href="/styles/index.css" />
