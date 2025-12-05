@@ -163,8 +163,11 @@
                         <div class="divider"></div>
 
                         <!-- address -->
-                        <div><div class="input-group">
-                            <input id="addressInput" type="text" placeholder="🏠 Enter Full Address">
+                        <div><div class="input-group with-icon">
+                            <span class="input-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.505A.5.5 0 0 0 10 15h2a.5.5 0 0 0 .5-.5V8.207l.646.647a.5.5 0 0 0 .708-.708L8 2.207 1.146 7.146a.5.5 0 0 0 .708.708L2.5 7.207V14.5a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5z"/></svg>
+                            </span>
+                            <input id="addressInput" type="text" placeholder="Enter Full Address">
                         </div></div>
                     </div>
                     <button onclick="calculateProbability()">

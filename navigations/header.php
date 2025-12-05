@@ -11,6 +11,7 @@
 .header .site-title {
     margin: 0;
     font-size: 1.4rem; /* Adjusted for responsiveness */
+    font-weight: 700; /* Use a consistent bold font-weight */
     z-index: 10; /* Ensure title is above mobile nav */
 }
 .header .site-title a {

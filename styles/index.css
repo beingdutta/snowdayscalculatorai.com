@@ -59,6 +59,22 @@ body{
     font-weight:bold
 }
 
+/* Input with icon styling */
+.input-group.with-icon {
+    position: relative;
+}
+.input-group .input-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+    pointer-events: none; /* Allows clicks to pass through to the input */
+}
+#addressInput {
+    padding-left: 3rem; /* Add space for the icon */
+}
+
 /* inputs */
 .input-group{margin:.5rem 0}
 select,input[type=text]{
