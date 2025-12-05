@@ -132,22 +132,30 @@ async function calculateProbability() {
     currentForecast = processForecast(periods);
 
     const wrap = document.getElementById("forecastResults");
-    wrap.innerHTML = currentForecast.map(d => `
-      <div class="forecast-card">
-        <div class="status-label ${d.snow?'snow':'clear'}">
-          ${d.snow?'High chance of Snow Day ❄️':'No Snow Expected ☀️'}
+    wrap.innerHTML = currentForecast.map(d => {
+      const chanceText = d.snow ? 'Chance of Closure' : 'Precipitation Chance';
+      const footerText = d.snow ? '❄️ Schools likely closed! Stay safe!' : '☀️ Normal school day expected.';
+      return `
+        <div class="forecast-card ${d.snow ? 'snow-day' : 'clear-day'}">
+            <div class="card-header">
+                <div class="date">${d.date}</div>
+                <div class="status">${d.snow ? 'Snow Day Likely' : 'Clear Day'}</div>
+            </div>
+            <div class="card-body">
+                <p><strong>Condition:</strong> ${d.forecast}</p>
+                <p><strong>Temperature:</strong> ${d.temp}°F</p>
+                <div class="progress-label">
+                    <span>${chanceText}</span>
+                    <span>${d.chance}%</span>
+                </div>
+                <div class="progress-wrap">
+                    <div class="progress-fill" style="width:${d.chance}%"></div>
+                </div>
+            </div>
+            <div class="card-footer">${footerText}</div>
         </div>
-        <div>Date: ${d.date}</div>
-        <div>Condition: ${d.forecast}</div>
-        <div>Temperature: ${d.temp}°F</div>
-        <div class="progress-wrap">
-          <div class="progress-fill" style="width:${d.chance}%"></div>
-        </div>
-        <div class="status-label ${d.snow?'snow':'clear'}" style="margin-top:1rem">
-          ${d.snow?'Schools likely closed! Stay safe!':'Normal school day expected'}
-        </div>
-      </div>
-    `).join("");
+      `;
+    }).join("");
 
     injectStructuredData(currentForecast, currentAddress);
     success = true;
@@ -254,6 +262,29 @@ function generatePDF() {
       y = 20;
     }
   });
+
+  // --- New Promotional Box ---
+  y += 10; // Add some space after the last card
+  const promoText = "Hey Mate!! Got a business, winter café, snow shop, or own a school? You can list your business/services for free this winter for the first 15 days, and for a nominal charge thereafter.";
+  const promoBoxHeight = 30;
+  if (y + promoBoxHeight > doc.internal.pageSize.getHeight() - 20) {
+      doc.addPage();
+      y = 20;
+  }
+
+  // Draw the promo box
+  doc.setFillColor(224, 247, 250); // Light cyan background
+  doc.setDrawColor(32, 87, 129); // Primary color for border
+  doc.setLineWidth(0.5);
+  doc.roundedRect(mX, y, pageW - mX * 2, promoBoxHeight, 3, 3, "FD"); // Fill and Draw
+
+  // Add text to the promo box
+  doc.setFont("helvetica", "bold").setFontSize(12).setTextColor(32, 87, 129);
+  doc.text("Feature Your Business!", pageW / 2, y + 8, { align: "center" });
+  doc.setFont("helvetica", "normal").setFontSize(10).setTextColor(42, 54, 59);
+  const splitText = doc.splitTextToSize(promoText, pageW - mX * 2 - 10);
+  doc.text(splitText, pageW / 2, y + 15, { align: "center" });
+  y += promoBoxHeight + 10; // Move y down for the next section
 
   // Promo + timestamp
   if (y + 14 > doc.internal.pageSize.getHeight() - 15) {

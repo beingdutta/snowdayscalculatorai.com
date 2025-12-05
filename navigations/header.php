@@ -3,45 +3,123 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.2rem 2.5rem; /* Increased vertical and horizontal padding */
+    padding: 1rem 2.5rem; /* Adjusted padding */
     background: linear-gradient(135deg, var(--primary), var(--secondary));
     box-shadow: 0 4px 15px rgba(0, 0, 0, .1);
+    position: relative; /* For mobile nav positioning */
 }
 .header h1 {
     margin: 0;
-    font-size: 1.6rem; /* Slightly larger for better presence */
+    font-size: 1.4rem; /* Adjusted for responsiveness */
+    z-index: 10; /* Ensure title is above mobile nav */
 }
 .header h1 a {
-    color: #fff; /* Ensure site name is white */
-    text-decoration: none; /* Remove the underline */
+    color: #fff;
+    text-decoration: none;
 }
-.header nav {
+.header .main-nav { /* Changed from nav to .main-nav */
     display: flex;
-    gap: 2rem; /* Increased space between nav links */
+    gap: 2rem;
 }
-.header nav a {
-    color: #fff; /* White links for better contrast */
+.header .main-nav a {
+    color: #fff;
     text-decoration: none;
     font-size: 1.05rem;
-    padding-bottom: 5px; /* Space for the underline effect */
-    border-bottom: 2px solid transparent; /* Placeholder for hover effect */
-    transition: border-color 0.3s ease, opacity 0.3s ease; /* Smooth transition */
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease, opacity 0.3s ease;
 }
-.header nav a:hover {
-    border-bottom-color: var(--accent); /* Use accent color for underline on hover */
+.header .main-nav a:hover {
+    border-bottom-color: var(--accent);
     opacity: 0.9;
+}
+
+/* Hamburger Menu Button */
+.hamburger-btn {
+    display: none; /* Hidden on desktop */
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2rem;
+    height: 2rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+}
+.hamburger-btn span {
+    width: 2rem;
+    height: 0.25rem;
+    background: #fff;
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 820px) { /* Breakpoint when nav items get tight */
+    .header {
+        padding: 1rem 1.5rem;
+        justify-content: center; /* Center the title */
+    }
+    .header h1 {
+        font-size: 1.2rem; /* Reduce title size on mobile */
+    }
+    .header .main-nav { /* Increased specificity */
+        display: none; /* Hide nav on mobile */
+        flex-direction: column;
+        gap: 1rem;
+        background: var(--primary);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 0;
+        z-index: 100; /* Ensure menu is on top of content */
+        text-align: center;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+    .header .main-nav.active { /* Increased specificity */
+        display: flex; /* Show mobile nav when active */
+    }
+    .hamburger-btn {
+        display: flex; /* Show hamburger on mobile */
+        position: absolute;
+        top: 0.05rem; /* Adjust this value to move the menu icon up or down */
+        right: 1.5rem;
+    }
 }
 </style>
 <header class="header">
     <h1>
         <a href="/">
-            ❄️ SnowDay Calculator AI USA
+            SnowDay Calculator AI&nbsp;USA
         </a>
     </h1>
-    <nav>
+    <nav class="main-nav" id="mainNav">
         <a href="/">Home</a>
         <a href="/blogs">Blogs</a>
         <a href="/about">About&nbsp;Us</a>
         <a href="/contact">Contact&nbsp;Us</a>
     </nav>
+    <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
 </header>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const mainNav = document.getElementById('mainNav');
+
+        if (hamburgerBtn && mainNav) {
+            hamburgerBtn.addEventListener('click', function() {
+                mainNav.classList.toggle('active');
+                const isExpanded = mainNav.classList.contains('active');
+                hamburgerBtn.setAttribute('aria-expanded', isExpanded);
+            });
+        }
+    });
+</script>

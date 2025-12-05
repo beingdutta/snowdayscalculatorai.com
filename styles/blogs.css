@@ -116,7 +116,29 @@
 }
 
 /* responsiveness */
-@media(max-width:600px){
-    .blog-card{padding:1.25rem 1.5rem}
-    .blog-heading{font-size:1.6rem}
+@media(max-width: 768px){ /* Use a more common breakpoint */
+    .blog-heading{ font-size: 1.8rem; }
+
+    .blog-card {
+        flex-direction: row;
+        align-items: stretch; /* Make items same height */
+        padding: 0; /* Remove padding from card itself */
+    }
+    .blog-card-image {
+        width: 120px; /* A fixed width for the image thumbnail */
+        height: auto; /* Let the height be determined by the flex container */
+        flex-shrink: 0; /* Prevent image from shrinking */
+        border-right: 4px solid var(--accent);
+        border-bottom: 0; /* Remove bottom border */
+    }
+    .blog-card-content {
+        padding: 0.75rem 1rem; /* Reduce padding to decrease height */
+    }
+    .blog-card h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.25rem;
+    }
+    .blog-card p {
+        display: none; /* Hide paragraph on mobile to reduce height */
+    }
 }

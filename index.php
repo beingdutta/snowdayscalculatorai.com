@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="#1 Snow Day Calculator App For the US - A snow day is an unexpected school or work closure caused by snow, our snow day calculator predicts it all with the best accuracy possible.">
+        <meta name="description" content="#1 Snow Day Calculator for Schools & Work in the US! Get your most accurate snow day forecast & closure predictions. Skip guesswork with our reliable, localized alerts.">
         <meta name="keywords" content="snow day, snow day calculator, snow day calculator accuweather, snow day college calculator, snow day michigan calculator, snow day chance calculator, snow day accurate calculator, snow day chance calculator, snow day predictor calculator, snow day ai calculator, snow day accurate calculator, snow day app calculator, snow day percentage calculator, snow day probability calculator, snow day calculator free, snow day predictor calculator, snow day best calculator">
         <title>SnowDay Calculator – Predict School Closures</title>
         <link rel="icon" href="/assets/site-icon-apt.png" type="image/x-icon" />
@@ -168,7 +168,7 @@
                         </div></div>
                     </div>
                     <button onclick="calculateProbability()">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 0.5em;"><line x1="12" y1="2" x2="12" y2="22"></line><line x1="17.6" y1="6.4" x2="6.4" y2="17.6"></line><line x1="22" y1="12" x2="2" y2="12"></line><line x1="17.6" y1="17.6" x2="6.4" y2="6.4"></line></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="2" x2="12" y2="22"></line><line x1="17.6" y1="6.4" x2="6.4" y2="17.6"></line><line x1="22" y1="12" x2="2" y2="12"></line><line x1="17.6" y1="17.6" x2="6.4" y2="6.4"></line></svg>
                         Calculate Snow-Day Chance
                     </button>
                 </div>
@@ -179,11 +179,11 @@
                     <div id="forecastResults"></div>
                     <div style="display:flex;flex-direction:column;gap:1rem">
                         <button onclick="generatePDF()">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16" style="vertical-align: -0.125em; margin-right: 0.5em;"><path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16" stroke="currentColor" stroke-width="0.5"><path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/></svg>
                             Download PDF Report
                         </button>
                         <button onclick="resetCalculator()">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16" style="vertical-align: -0.125em; margin-right: 0.5em;"><path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"/><path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16" stroke="currentColor" stroke-width="0.5"><path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"/><path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/></svg>
                             Calculate for Another Place
                         </button>
                     </div>
@@ -273,8 +273,8 @@
         <div class="popup-overlay" id="adPopupOverlay">
             <div class="popup-box">
                 <button class="popup-close-btn" id="crossClosePopup" aria-label="Close">&times;</button>
-                <h3>Support Local & Get Noticed!</h3>
-                <p>Do you run an Airbnb, a cozy café, or a snow-related service? We’d love to support local businesses like yours. List your offering on our site’s front page and enjoy <strong>15 days completely free</strong>.</p>
+                <h3>Hold On For a Sec Mate!!</h3>
+                <p>Do you run an Airbnb, a cozy café, or a snow-related service? We’d love to support local businesses like yours. List your offering on our site’s front page and enjoy <br><strong style="color: var(--primary);">15 days completely free</strong>.</p>
                 <p>After the trial, you can stay featured for a small, budget-friendly charge. Let’s help your business <br><br> <u>Shine this snow season together.</u></p>
                 <div class="popup-buttons">
                     <a href="/contact" class="popup-btn primary">Reach out to us</a>
@@ -311,9 +311,9 @@
                     if (!response.ok) throw new Error('Location fetch failed');
                     
                     const data = await response.json();
-                    const location = data.city && data.region ? `from ${data.city}, ${data.region}` : 'from a cozy spot';
+                    const location = data.city && data.region ? `from ${data.city}, ${data.region}` : 'from somewhere cozy';
                     const snowIcon = ` <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" style="vertical-align: -0.125em;"><path d="M8 1.5a.5.5 0 0 1 .5.5v1.293l1.146-1.147a.5.5 0 0 1 .708.708L9.207 3.5h1.293a.5.5 0 0 1 .5.5v1.293l1.147-1.146a.5.5 0 0 1 .708.708L11.5 6.207v1.293a.5.5 0 0 1-.5.5h-1.293l1.147 1.146a.5.5 0 0 1-.708.708L9.5 8.707v1.293a.5.5 0 0 1-.5.5h-1.293l1.146 1.147a.5.5 0 0 1-.708.708L8.5 11.707v1.293a.5.5 0 0 1-1 0v-1.293l-1.146 1.147a.5.5 0 0 1-.708-.708L6.793 11.5H5.5a.5.5 0 0 1-.5-.5V9.707l-1.147 1.146a.5.5 0 0 1-.708-.708L4.5 8.707H3.207a.5.5 0 0 1-.5-.5V6.207l1.147-1.146a.5.5 0 1 1 .708-.708L5.5 6.793h1.293a.5.5 0 0 1 .5-.5v-1.293l-1.147-1.147a.5.5 0 0 1 .708-.708L7.207 3.5h1.293a.5.5 0 0 1 .5-.5z"/></svg>`;
-                    greetingElement.innerHTML = `${greetingPrefix} ${location}! Feeling the snow? We are shivering just thinking about it.` + snowIcon;
+                    greetingElement.innerHTML = `${greetingPrefix} ${location}! Ready for some snow?` + snowIcon;
                 } catch (error) {
                     console.warn('Could not fetch location:', error);
                     // Fallback to the default message if the API fails

@@ -157,3 +157,13 @@
 .not-found-wrapper .home-button svg {
     vertical-align: middle;
 }
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .static-page-wrapper {
+        padding: 1.5rem 1rem; /* Reduce padding on small screens */
+        margin: 1.5rem auto 2rem; /* Reduce vertical margins */
+    }
+    .static-page-wrapper h1 { font-size: 1.8rem; }
+    .static-page-wrapper h2 { font-size: 1.4rem; }
+}
