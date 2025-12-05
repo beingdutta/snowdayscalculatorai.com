@@ -11,6 +11,7 @@
         <link rel="canonical" href="https://snowdayscalculatorai.com/" />
         <link rel="stylesheet" href="/styles/index.css" />
         <link rel="stylesheet" href="/styles/incoming-queries.css" />
+        <link rel="stylesheet" href="/styles/blogs.css" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
         
         <!-- Google tag (gtag.js) -->
@@ -163,7 +164,10 @@
                             <input id="addressInput" type="text" placeholder="🏠 Enter Full Address">
                         </div></div>
                     </div>
-                    <button onclick="calculateProbability()">❄️ Calculate Snow-Day Chance</button>
+                    <button onclick="calculateProbability()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 0.5em;"><line x1="12" y1="2" x2="12" y2="22"></line><line x1="17.6" y1="6.4" x2="6.4" y2="17.6"></line><line x1="22" y1="12" x2="2" y2="12"></line><line x1="17.6" y1="17.6" x2="6.4" y2="6.4"></line></svg>
+                        Calculate Snow-Day Chance
+                    </button>
                 </div>
 
                 <!--------------- results ------------------->
@@ -185,11 +189,63 @@
             </div>
 
 
-            
+            <!-------------------------- Featured Articles ---------------------------->
+            <div class="blog-wrapper" style="margin-top: 3rem;">
+                <h2 class="blog-heading">Featured Articles</h2>
+                <section class="blog-list">
+                    <!-- card / tab #1 -->
+                    <a class="blog-card" href="/blogs/what-is-a-snow-day">
+                        <div class="blog-card-image" style="background-image: url('https://plus.unsplash.com/premium_photo-1671188533295-ad01d3024a0c?q=80&w=869&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"></div>
+                        <div class="blog-card-content">
+                            <h3>What is a Snow Day?</h3>
+                            <p>One of the most common winter questions from students and parents alike: “How many inches of snow does it take to cancel school?” …</p>
+                            <div class="blog-card-footer">
+                                <span>Published: Dec 5, 2025 • Read More →</span>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- card / tab #2 -->
+                    <a class="blog-card" href="/blogs/what-makes-a-snow-day">
+                        <div class="blog-card-image" style="background-image: url('https://plus.unsplash.com/premium_photo-1701201196877-efcde9870b42?q=80&w=869&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"></div>
+                        <div class="blog-card-content">
+                            <h3>What makes a Snow Day?</h3>
+                            <p>Ever wonder what actually leads a school district to call off classes for snow? It's not just about how many inches fall overnight. School administrators must …</p>
+                            <div class="blog-card-footer">
+                                <span>Published: Dec 4, 2025 • Read More →</span>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- card / tab #3 -->
+                    <a class="blog-card" href="/blogs/how-snow-day-calculator-works">
+                        <div class="blog-card-image" style="background-image: url('https://plus.unsplash.com/premium_photo-1701201194954-3d9d69991ece?q=80&w=869&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"></div>
+                        <div class="blog-card-content">
+                            <h3>How Snow Day calculator works?</h3>
+                            <p>A snow day chance calculator is only useful if it knows how your region responds. In places like Michigan or upstate New York, 6 inches of snow may not cancel schools …</p>
+                            <div class="blog-card-footer">
+                                <span>Published: Dec 3, 2025 • Read More →</span>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- card / tab #4 -->
+                    <a class="blog-card" href="/blogs/how-much-snow-for-a-snow-day">
+                        <div class="blog-card-image" style="background-image: url('https://images.unsplash.com/photo-1614734292826-78010d348dfc?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"></div>
+                        <div class="blog-card-content">
+                            <h3>How much Snow for a Snow Day?</h3>
+                            <p>The truth is, there’s no single number that applies everywhere—but with the help of modern tools like the Snow Day Calculator, you can find out what matters most for your location …</p>
+                            <div class="blog-card-footer">
+                                <span>Published: Dec 2, 2025 • Read More →</span>
+                            </div>
+                        </div>
+                    </a>
+                </section>
+            </div>
 
             <!-------------------------- FAQ ---------------------------->
             <div class="faq-section">
-                <h2>❓ Frequently Asked Questions</h2>
+                <h2>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -0.2em; margin-right: 0.5em;"><path d="M18 10a6 6 0 0 0-12 0c0 4 6 10 6 10s6-6 6-10z"></path><line x1="12" y1="10" x2="12" y2="10"></line><line x1="12" y1="13" x2="12" y2="13"></line><path d="M12 17a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"></path></svg>
+                    Frequently Asked Questions
+                </h2>
                 <div class="faq-item">
                     <div class="faq-question" onclick="toggleFAQ(this)">What Is a Snow Day ?<span>▼</span></div>
                     <div class="faq-answer">A snow day is an unexpected school or work closure caused by severe winter weather. This could mean heavy snow, ice storms, dangerously low temperatures, or hazardous road conditions. Snow days are typically declared by school administrators, often in the early morning hours.</div>

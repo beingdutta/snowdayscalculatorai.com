@@ -72,6 +72,10 @@ select,input[type=text]{
     background:var(--card-bg);
     color:var(--text)
 }
+/* Style for the new location input */
+#locationInput {
+    padding-left: 3.5rem; /* Make space for the icon */
+}
 
 /* buttons */
 button{
@@ -225,8 +229,6 @@ button:hover{filter:brightness(.9)}       /* darker on hover */
 }
 
 @media(max-width:768px){
-    .input-section{grid-template-columns:1fr;grid-template-rows:auto 1px auto}
-    .divider{width:100%;height:1px}
     .popup-box { padding: 1.5rem; }
     .popup-box h3 { font-size: 1.4rem; }
 }
