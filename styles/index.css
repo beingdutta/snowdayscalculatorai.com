@@ -271,6 +271,17 @@ button:hover{filter:brightness(.9)}
 .faq-answer{display:none;padding:0 1rem 1rem;border-top:1px solid var(--accent)}
 .hidden-section{display:none !important;height:0;overflow:hidden}
 
+/* Style for FAQ heading to match other centered headings */
+.faq-section h2 {
+    font-size: 1.8rem;
+    color: var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    margin-bottom: 1.5rem;
+}
+
 /* When calculator is hidden, remove the top margin from the results to close the gap */
 .calculator-card.hidden-section + .results {
     margin-top: 0;

@@ -273,7 +273,7 @@
             <!-------------------------- FAQ ---------------------------->
             <div class="faq-section">
                 <h2>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -0.2em; margin-right: 0.5em;"><path d="M18 10a6 6 0 0 0-12 0c0 4 6 10 6 10s6-6 6-10z"></path><line x1="12" y1="10" x2="12" y2="10"></line><line x1="12" y1="13" x2="12" y2="13"></line><path d="M12 17a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"></path></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg>
                     Frequently Asked Questions
                 </h2>
                 <div class="faq-item">
