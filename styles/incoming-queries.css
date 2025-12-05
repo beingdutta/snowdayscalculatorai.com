@@ -6,7 +6,7 @@
 
 /* Container */
 .incoming-queries {
-  margin: -1rem 2rem 1rem;
+  margin: -1rem 0 1rem;
   font-family: 'Segoe UI', system-ui, sans-serif;
   color: var(--iq-text);
 }
@@ -63,6 +63,13 @@
 
 /* Responsive tweak */
 @media (max-width: 600px) {
-  .incoming-queries h3 { font-size: 1.1rem; }
+  .incoming-queries {
+    margin: -1rem 0 1rem; /* Remove side margins on mobile */
+  }
+  .incoming-queries h3 {
+    font-size: 1rem;
+    text-align: center; /* Center the text */
+  }
+  .incoming-queries h3 svg { display: none; } /* Hide icon on mobile to save space */
   .query-card { font-size: 0.85rem; padding: 0.5rem; }
 }

@@ -32,7 +32,7 @@ addressInput.addEventListener("input", () => {
 });
 
 function showInputs(flag) {
-  document.getElementById("inputContainer")
+  document.querySelector(".calculator-card")
           .classList.toggle("hidden-section", !flag);
 }
 
@@ -135,6 +135,8 @@ async function calculateProbability() {
     wrap.innerHTML = currentForecast.map(d => {
       const chanceText = d.snow ? 'Chance of Closure' : 'Precipitation Chance';
       const footerText = d.snow ? '❄️ Schools likely closed! Stay safe!' : '☀️ Normal school day expected.';
+      const tempPercent = Math.max(0, Math.min(100, Number(d.temp) + 10)); // Scale temp for graph
+
       return `
         <div class="forecast-card ${d.snow ? 'snow-day' : 'clear-day'}">
             <div class="card-header">
@@ -143,13 +145,31 @@ async function calculateProbability() {
             </div>
             <div class="card-body">
                 <p><strong>Condition:</strong> ${d.forecast}</p>
-                <p><strong>Temperature:</strong> ${d.temp}°F</p>
-                <div class="progress-label">
-                    <span>${chanceText}</span>
-                    <span>${d.chance}%</span>
+
+                <div class="stat-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z"/></svg>
+                    <div class="stat-content">
+                        <div class="progress-label">
+                            <span>Temperature</span>
+                            <span>${d.temp}°F</span>
+                        </div>
+                        <div class="progress-wrap temp-bar">
+                            <div class="progress-fill" style="width:${tempPercent}%;"></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="progress-wrap">
-                    <div class="progress-fill" style="width:${d.chance}%"></div>
+
+                <div class="stat-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"/><path d="M8 19v1"/><path d="M8 14v1"/><path d="M16 19v1"/><path d="M16 14v1"/><path d="M12 21v1"/><path d="M12 16v1"/></svg>
+                    <div class="stat-content">
+                        <div class="progress-label">
+                            <span>${chanceText}</span>
+                            <span>${d.chance}%</span>
+                        </div>
+                        <div class="progress-wrap chance-bar">
+                            <div class="progress-fill" style="width:${d.chance}%"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="card-footer">${footerText}</div>

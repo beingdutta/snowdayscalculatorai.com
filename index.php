@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="#1 Snow Day Calculator for Schools & Work in the US! Get your most accurate snow day forecast & closure predictions. Skip guesswork with our reliable, localized alerts.">
+        <meta name="description" content="#1 Snow Day Calculator for Schools & Work in the US! Get your most accurate snow day forecast & closure. Skip guesswork with our reliable calculator.">
         <meta name="keywords" content="snow day, snow day calculator, snow day calculator accuweather, snow day college calculator, snow day michigan calculator, snow day chance calculator, snow day accurate calculator, snow day chance calculator, snow day predictor calculator, snow day ai calculator, snow day accurate calculator, snow day app calculator, snow day percentage calculator, snow day probability calculator, snow day calculator free, snow day predictor calculator, snow day best calculator">
         <title>SnowDay Calculator – Predict School Closures</title>
         <link rel="icon" href="/assets/site-icon-apt.png" type="image/x-icon" />
@@ -173,24 +173,26 @@
                     </button>
                 </div>
 
-                <!--------------- results ------------------->
-                <div id="results" class="results">
-                    <h3>Snow-Day Calculator Forecasts</h3>
-                    <div id="forecastResults"></div>
-                    <div style="display:flex;flex-direction:column;gap:1rem">
-                        <button onclick="generatePDF()">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16" stroke="currentColor" stroke-width="0.5"><path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/></svg>
-                            Download PDF Report
-                        </button>
-                        <button onclick="resetCalculator()">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16" stroke="currentColor" stroke-width="0.5"><path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"/><path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/></svg>
-                            Calculate for Another Place
-                        </button>
-                    </div>
-                </div>
-
             </div>
 
+            <!-- Results Section (now outside calculator card) -->
+            <div id="results" class="results">
+                <h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" x2="12" y1="20" y2="10"></line><line x1="18" x2="18" y1="20" y2="4"></line><line x1="6" x2="6" y1="20" y2="16"></line></svg>
+                    Snow-Day Calculator Forecasts
+                </h3>
+                <div id="forecastResults"></div>
+                <div style="display:flex;flex-direction:column;gap:1rem">
+                    <button onclick="generatePDF()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16" stroke="currentColor" stroke-width="0.5"><path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/></svg>
+                        Download PDF Report
+                    </button>
+                    <button onclick="resetCalculator()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16" stroke="currentColor" stroke-width="0.5"><path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"/><path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/></svg>
+                        Calculate for Another Place
+                    </button>
+                </div>
+            </div>
 
             <!-------------------------- Featured Articles ---------------------------->
             <div class="blog-wrapper" style="margin-top: 3rem;">
@@ -237,6 +239,28 @@
                             <p>The truth is, there’s no single number that applies everywhere—but with the help of modern tools like the Snow Day Calculator, you can find out what matters most for your location …</p>
                             <div class="blog-card-footer">
                                 <span>Published: Dec 2, 2025 • Read More →</span>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- card / tab #5 -->
+                    <a class="blog-card" href="/blogs/how-much-snow-does-it-take-to-cancel-school">
+                        <div class="blog-card-image" style="background-image: url('https://plus.unsplash.com/premium_photo-1671004291961-6a773194fd73?q=80&w=869&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"></div>
+                        <div class="blog-card-content">
+                            <h3>How much Snow does it take to cancel school?</h3>
+                            <p>Every winter, students across the U.S. and Canada wake up and ask the same question: “How much snow does it take to cancel school?” The answer depends on where you live, how your district operates …</p>
+                            <div class="blog-card-footer">
+                                <span>Published: Dec 2, 2025 • Read More →</span>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- card / tab #6 -->
+                    <a class="blog-card" href="/blogs/How-many-snow-days-do-schools-get">
+                        <div class="blog-card-image" style="background-image: url('https://plus.unsplash.com/premium_photo-1701201194704-8b7b8e21c8d2?q=80&w=869&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"></div>
+                        <div class="blog-card-content">
+                            <h3>How many Snow Days do schools get?</h3>
+                            <p> Snow days are a winter tradition—but how many do schools actually get each year? The answer depends on your location, weather patterns, and district policies. Thanks to tools like the snow day calculator…</p>
+                            <div class="blog-card-footer">
+                                <span>Published: Dec 1, 2025 • Read More →</span>
                             </div>
                         </div>
                     </a>
@@ -296,29 +320,25 @@
                 const greetingElement = document.getElementById('greetingMessage');
                 const isReturningUser = document.cookie.split(';').some((item) => item.trim().startsWith(COOKIE_NAME + '='));
 
-                let greetingPrefix;
-                if (isReturningUser) {
-                    greetingPrefix = "Welcome back, mate!";
-                } else {
-                    greetingPrefix = "Hi mate!";
-                    // Set a cookie to remember the user for 1 year
-                    document.cookie = `${COOKIE_NAME}=true; path=/; max-age=${365 * 24 * 60 * 60}; SameSite=Lax`;
-                }
-
                 try {
                     // Using a free IP-based geolocation service
                     const response = await fetch('https://ipapi.co/json/');
                     if (!response.ok) throw new Error('Location fetch failed');
                     
                     const data = await response.json();
-                    const location = data.city && data.region ? `from ${data.city}, ${data.region}` : 'from somewhere cozy';
-                    const snowIcon = ` <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" style="vertical-align: -0.125em;"><path d="M8 1.5a.5.5 0 0 1 .5.5v1.293l1.146-1.147a.5.5 0 0 1 .708.708L9.207 3.5h1.293a.5.5 0 0 1 .5.5v1.293l1.147-1.146a.5.5 0 0 1 .708.708L11.5 6.207v1.293a.5.5 0 0 1-.5.5h-1.293l1.147 1.146a.5.5 0 0 1-.708.708L9.5 8.707v1.293a.5.5 0 0 1-.5.5h-1.293l1.146 1.147a.5.5 0 0 1-.708.708L8.5 11.707v1.293a.5.5 0 0 1-1 0v-1.293l-1.146 1.147a.5.5 0 0 1-.708-.708L6.793 11.5H5.5a.5.5 0 0 1-.5-.5V9.707l-1.147 1.146a.5.5 0 0 1-.708-.708L4.5 8.707H3.207a.5.5 0 0 1-.5-.5V6.207l1.147-1.146a.5.5 0 1 1 .708-.708L5.5 6.793h1.293a.5.5 0 0 1 .5-.5v-1.293l-1.147-1.147a.5.5 0 0 1 .708-.708L7.207 3.5h1.293a.5.5 0 0 1 .5-.5z"/></svg>`;
-                    greetingElement.innerHTML = `${greetingPrefix} ${location}! Ready for some snow?` + snowIcon;
+                    const location = data.city || 'local'; // Fallback to 'local'
+
+                    if (isReturningUser) {
+                        greetingElement.innerHTML = `We know a ${location} winter is a special kind of chilly, isn't it? Stay warm, friend. We're here to help you plan for it.`;
+                    } else {
+                        greetingElement.innerHTML = "Hello and welcome! Pour a warm drink and get comfortable. You've come to the right place to find out if the snow will change your plans.";
+                        // Set a cookie to remember the user for 1 year
+                        document.cookie = `${COOKIE_NAME}=true; path=/; max-age=${365 * 24 * 60 * 60}; SameSite=Lax`;
+                    }
                 } catch (error) {
                     console.warn('Could not fetch location:', error);
-                    // Fallback to the default message if the API fails
-                    const snowIcon = ` <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" style="vertical-align: -0.125em;"><path d="M8 1.5a.5.5 0 0 1 .5.5v1.293l1.146-1.147a.5.5 0 0 1 .708.708L9.207 3.5h1.293a.5.5 0 0 1 .5.5v1.293l1.147-1.146a.5.5 0 0 1 .708.708L11.5 6.207v1.293a.5.5 0 0 1-.5.5h-1.293l1.147 1.146a.5.5 0 0 1-.708.708L9.5 8.707v1.293a.5.5 0 0 1-.5.5h-1.293l1.146 1.147a.5.5 0 0 1-.708.708L8.5 11.707v1.293a.5.5 0 0 1-1 0v-1.293l-1.146 1.147a.5.5 0 0 1-.708-.708L6.793 11.5H5.5a.5.5 0 0 1-.5-.5V9.707l-1.147 1.146a.5.5 0 0 1-.708-.708L4.5 8.707H3.207a.5.5 0 0 1-.5-.5V6.207l1.147-1.146a.5.5 0 1 1 .708-.708L5.5 6.793h1.293a.5.5 0 0 1 .5-.5v-1.293l-1.147-1.147a.5.5 0 0 1 .708-.708L7.207 3.5h1.293a.5.5 0 0 1 .5-.5z"/></svg>`;
-                    greetingElement.innerHTML = `${greetingPrefix}! Are you feeling the snow?` + snowIcon;
+                    // Fallback to the new user message if location fetch fails
+                    greetingElement.innerHTML = "Hello and welcome! Pour a warm drink and get comfortable. You've come to the right place to find out if the snow will change your plans.";
                 }
             }
 
@@ -353,10 +373,10 @@
                 const closeButton = document.getElementById('closeAdPopup');
                 const crossCloseButton = document.getElementById('crossClosePopup');
 
-                // Show popup after 6 seconds
+                // Show popup after 12 seconds
                 setTimeout(() => {
                     popupOverlay.style.display = 'flex';
-                }, 10000);
+                }, 12000);
 
                 // Close popup when "OK" is clicked
                 closeButton.addEventListener('click', () => {

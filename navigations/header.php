@@ -39,8 +39,8 @@
     display: none; /* Hidden on desktop */
     flex-direction: column;
     justify-content: space-around;
-    width: 2rem;
-    height: 2rem;
+    width: 1.4rem; /* Further reduced size for better proportion */
+    height: 1.4rem;
     background: transparent;
     border: none;
     cursor: pointer;
@@ -48,8 +48,8 @@
     z-index: 10;
 }
 .hamburger-btn span {
-    width: 2rem;
-    height: 0.25rem;
+    width: 1.4rem; /* Match button width */
+    height: 0.15rem; /* Make lines thinner */
     background: #fff;
     border-radius: 10px;
     transition: all 0.3s linear;
@@ -86,8 +86,9 @@
     .hamburger-btn {
         display: flex; /* Show hamburger on mobile */
         position: absolute;
-        top: 0.05rem; /* Adjust this value to move the menu icon up or down */
-        right: 1.5rem;
+        top: 24%; /* Vertically center */
+        right: 1.3rem;
+        transform: translateY(-50%); /* Adjust for perfect centering */
     }
 }
 </style>

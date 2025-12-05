@@ -34,12 +34,11 @@ body{
 
 /* ======= calculator card ======= */
 .calculator-card{
-    background:var(--card-bg);
+    background: var(--card-bg);
+    padding: 2rem;
     border-radius:20px;
-    padding:2rem;
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
-    margin:2rem 0;
-    position:relative
+    position:relative;
+    box-shadow: 0 8px 25px rgba(0,0,0,.07);
 }
 .input-note{text-align:center;margin:1rem 0;color:var(--secondary);font-size:1.1rem}
 
@@ -119,7 +118,16 @@ button:hover{filter:brightness(.9)}
 /* results section */
 .results{display:none;margin-top:2rem;animation:fadeIn .5s}
 @keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
-.results h3{font-size:1.45rem;color:var(--primary);margin-top:0;margin-bottom:1rem}
+.results h3{
+    font-size:1.45rem;
+    color:var(--primary);
+    margin-top:0;
+    margin-bottom:1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+}
 
 /* forecast cards */
 .forecast-card {
@@ -183,13 +191,51 @@ button:hover{filter:brightness(.9)}
     margin-bottom: 0.5rem;
     color: var(--secondary);
 }
-.progress-fill{
-    height:100%;
-    background:linear-gradient(90deg,var(--secondary),var(--accent));
-    width:0%;
+.progress-fill {
+    height: 100%;
+    width: 0%;
     transition: width 0.5s ease-in-out;
 }
-.forecast-card.snow-day .progress-fill {
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.2rem;
+}
+
+.stat-item svg {
+    width: 28px;
+    height: 28px;
+    color: var(--secondary);
+    flex-shrink: 0;
+}
+
+.stat-item .stat-content {
+    flex-grow: 1;
+    width: 100%;
+}
+
+.stat-item .progress-label {
+    margin-bottom: 0;
+}
+
+.stat-item .progress-wrap {
+    margin-top: 0.2rem;
+}
+
+/* Temperature-specific gradient */
+.stat-item .temp-bar .progress-fill {
+    background: linear-gradient(to right, #3498db, #f1c40f, #e74c3c);
+}
+
+/* Default chance gradient */
+.stat-item .chance-bar .progress-fill {
+    background: linear-gradient(90deg, var(--secondary), var(--accent));
+}
+
+/* Snow day chance gradient override */
+.forecast-card.snow-day .chance-bar .progress-fill {
     background: linear-gradient(90deg, #ef5350, #ff9800);
 }
 
@@ -208,6 +254,18 @@ button:hover{filter:brightness(.9)}
 .faq-question{padding:1rem;cursor:pointer;display:flex;justify-content:space-between}
 .faq-answer{display:none;padding:0 1rem 1rem;border-top:1px solid var(--accent)}
 .hidden-section{display:none !important;height:0;overflow:hidden}
+
+/* When calculator is hidden, remove the top margin from the results to close the gap */
+.calculator-card.hidden-section + .results {
+    margin-top: 0;
+}
+
+/* Override for blog-wrapper on homepage to match container width */
+.container .blog-wrapper {
+    max-width: none;
+    padding: 0;
+    margin: 3rem 0 4rem;
+}
 
 /* --- Ad Popup Styles --- */
 .popup-overlay {
@@ -299,6 +357,11 @@ button:hover{filter:brightness(.9)}
     }
     .popup-box { padding: 1.5rem; }
     .popup-box h3 { font-size: 1.4rem; }
+
+    /* Adjust calculator card padding for mobile */
+    .calculator-card {
+        padding: 1.5rem 1rem;
+    }
 
     /* Adjust results heading for mobile */
     .results h3 {
