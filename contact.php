@@ -1,4 +1,6 @@
 <?php
+include __DIR__ . '/includes/user_tracker.php';
+
 $message_sent = false;
 $error_message = '';
 

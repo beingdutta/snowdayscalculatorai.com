@@ -1,3 +1,4 @@
+<?php include __DIR__ . '/includes/user_tracker.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -396,6 +397,28 @@
                 fetchLocationAndGreet();
                 initializeAdPopup();
             });
+
+            // --- Online Users Counter Logic ---
+            function updateOnlineUsers() {
+                const counterElement = document.getElementById('online-users-count');
+                if (!counterElement) return;
+
+                fetch('/includes/online_users.php')
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.online_users !== undefined) {
+                            counterElement.textContent = data.online_users;
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error fetching online users:', error);
+                        counterElement.textContent = 'N/A';
+                    });
+            }
+
+            // Update every 30 seconds
+            setInterval(updateOnlineUsers, 30000);
+            document.addEventListener('DOMContentLoaded', updateOnlineUsers);
         </script>
 
     </body>

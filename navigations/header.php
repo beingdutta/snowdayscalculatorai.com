@@ -92,6 +92,10 @@
         transform: translateY(-50%); /* Adjust for perfect centering */
     }
 }
+
+/* Online Users Counter */
+.online-users { color: #fff; font-size: 0.9rem; margin-left: auto; padding-right: 2rem; }
+@media (max-width: 820px) { .online-users { display: none; } }
 </style>
 <header class="header">
     <?php
@@ -103,6 +107,9 @@
             SnowDay Calculator AI&nbsp;USA
         </a>
     </<?php echo $tag; ?>>
+    <div class="online-users">
+        <span id="online-users-count">...</span> users online
+    </div>
     <nav class="main-nav" id="mainNav">
         <a href="/">Home</a>
         <a href="/blogs">Blogs</a>

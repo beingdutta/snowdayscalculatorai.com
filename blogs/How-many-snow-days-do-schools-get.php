@@ -1,3 +1,4 @@
+<?php include __DIR__ . '/../includes/user_tracker.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
