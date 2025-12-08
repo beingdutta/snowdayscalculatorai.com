@@ -145,6 +145,15 @@ button:hover{filter:brightness(.9)}
     gap: 0.5em;
 }
 
+/* Location display in results */
+.forecast-location {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--secondary);
+    margin: -0.5rem 0 1.5rem;
+    font-weight: 600;
+}
+
 /* Chart Container */
 .chart-container {
     position: relative;
@@ -411,6 +420,10 @@ button:hover{filter:brightness(.9)}
     /* Adjust results heading for mobile */
     .results h3 {
         font-size: 1.25rem;
+    }
+
+    .forecast-location {
+        font-size: 1rem;
     }
 
     .chart-container {

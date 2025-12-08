@@ -114,134 +114,149 @@ function processForecast(periods) {
 
 /* ========= calculate ========= */
 async function calculateProbability() {
-  let addr = addressInput.value.trim();
-  if (!addr && stateSelect.value && zipcodeInput.value.trim()) {
-    addr = `${zipcodeInput.value.trim()}, ${stateSelect.selectedOptions[0].text}`;
-  }
-  if (!addr) {
-    alert("Please provide location information");
-    return;
-  }
-
-  currentAddress = addr;  // remember what the user entered
-
-  loader.style.display = "flex";
-  const startTime = Date.now();
-  let success = false;
-  try {
-    const periods = await callApiChain(addr);
-    currentForecast = processForecast(periods);
-
-    // Destroy previous chart if it exists, then create the new one
-    if (forecastChart) {
-        forecastChart.destroy();
+    let addr = addressInput.value.trim();
+    if (!addr && stateSelect.value && zipcodeInput.value.trim()) {
+        addr = `${zipcodeInput.value.trim()}, ${stateSelect.selectedOptions[0].text}`;
     }
-    const ctx = document.getElementById('forecastChart').getContext('2d');
+    if (!addr) {
+        alert("Please provide location information");
+        return;
+    }
 
-    // Create a new gradient for the 'Chance' area chart
-    const chanceGradient = ctx.createLinearGradient(0, 0, 0, 300);
-    chanceGradient.addColorStop(0, 'rgba(255, 159, 64, 0.6)'); // Warm orange
-    chanceGradient.addColorStop(1, 'rgba(255, 159, 64, 0.1)');
+    currentAddress = addr; // remember what the user entered
 
-    forecastChart = new Chart(ctx, {
-        type: 'line', // Change base type to line to allow layering
-        data: {
-            labels: currentForecast.map(d => d.date),
-            datasets: [{
-                label: 'Chance of Closure (%)',
-                data: currentForecast.map(d => d.chance),
-                borderColor: 'rgb(255, 159, 64)',
-                backgroundColor: chanceGradient,
-                fill: true,
-                tension: 0.4,
-                yAxisID: 'y_chance',
-                order: 2 // Draw this area chart behind the temperature line
-            }, {
-                label: 'Temperature (°F)',
-                data: currentForecast.map(d => d.temp),
-                borderColor: 'rgb(54, 162, 235)', // Cool blue for temperature
-                backgroundColor: 'transparent',
-                yAxisID: 'y_temp',
-                tension: 0.4,
-                pointBackgroundColor: '#fff',
-                pointBorderColor: 'rgb(54, 162, 235)',
-                pointHoverRadius: 7,
-                pointHoverBorderWidth: 2,
-                pointRadius: 5,
-                order: 1 // Ensure this line is drawn on top
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            interaction: {
-                mode: 'index',
-                intersect: false,
+    loader.style.display = "flex";
+    const startTime = Date.now();
+
+    try {
+        const periods = await callApiChain(addr);
+        currentForecast = processForecast(periods);
+
+        // --- SUCCESS PATH ---
+
+        // Update the location display
+        const locationElement = document.getElementById('forecastLocation');
+        if (locationElement) {
+            locationElement.innerHTML = `Forecast for: <strong>${currentAddress}</strong>`;
+        }
+
+        // Ensure loader shows for a minimum time on success
+        const elapsedTime = Date.now() - startTime;
+        const remainingTime = 7000 - elapsedTime;
+        if (remainingTime > 0) {
+            await new Promise(resolve => setTimeout(resolve, remainingTime));
+        }
+
+        // Destroy previous chart if it exists, then create the new one
+        if (forecastChart) {
+            forecastChart.destroy();
+        }
+        const ctx = document.getElementById('forecastChart').getContext('2d');
+
+        // Create a new gradient for the 'Chance' area chart
+        const chanceGradient = ctx.createLinearGradient(0, 0, 0, 300);
+        chanceGradient.addColorStop(0, 'rgba(255, 159, 64, 0.6)'); // Warm orange
+        chanceGradient.addColorStop(1, 'rgba(255, 159, 64, 0.1)');
+
+        forecastChart = new Chart(ctx, {
+            type: 'line', // Change base type to line to allow layering
+            data: {
+                labels: currentForecast.map(d => d.date),
+                datasets: [{
+                    label: 'Chance of Closure (%)',
+                    data: currentForecast.map(d => d.chance),
+                    borderColor: 'rgb(255, 159, 64)',
+                    backgroundColor: chanceGradient,
+                    fill: true,
+                    tension: 0.4,
+                    yAxisID: 'y_chance',
+                    order: 2 // Draw this area chart behind the temperature line
+                }, {
+                    label: 'Temperature (°F)',
+                    data: currentForecast.map(d => d.temp),
+                    borderColor: 'rgb(54, 162, 235)', // Cool blue for temperature
+                    backgroundColor: 'transparent',
+                    yAxisID: 'y_temp',
+                    tension: 0.4,
+                    pointBackgroundColor: '#fff',
+                    pointBorderColor: 'rgb(54, 162, 235)',
+                    pointHoverRadius: 7,
+                    pointHoverBorderWidth: 2,
+                    pointRadius: 5,
+                    order: 1 // Ensure this line is drawn on top
+                }]
             },
-            plugins: {
-                legend: {
-                    position: 'bottom',
-                    labels: {
-                        color: '#444',
-                        font: {
-                            family: "'Segoe UI', system-ui, sans-serif",
-                            weight: '600'
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                interaction: {
+                    mode: 'index',
+                    intersect: false,
+                },
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            color: '#444',
+                            font: {
+                                family: "'Segoe UI', system-ui, sans-serif",
+                                weight: '600'
+                            }
                         }
+                    },
+                    tooltip: {
+                        backgroundColor: 'rgba(0, 0, 0, 0.75)',
+                        titleFont: { size: 14, weight: 'bold', family: "'Segoe UI', system-ui, sans-serif" },
+                        bodyFont: { size: 12, family: "'Segoe UI', system-ui, sans-serif" },
+                        padding: 10,
+                        cornerRadius: 4,
+                        displayColors: true,
+                        boxPadding: 4,
+                        borderColor: 'rgba(255,255,255,0.2)',
+                        borderWidth: 1,
                     }
                 },
-                tooltip: {
-                    backgroundColor: 'rgba(0, 0, 0, 0.75)',
-                    titleFont: { size: 14, weight: 'bold', family: "'Segoe UI', system-ui, sans-serif" },
-                    bodyFont: { size: 12, family: "'Segoe UI', system-ui, sans-serif" },
-                    padding: 10,
-                    cornerRadius: 4,
-                    displayColors: true,
-                    boxPadding: 4,
-                    borderColor: 'rgba(255,255,255,0.2)',
-                    borderWidth: 1,
-                }
-            },
-            scales: {
-                x: {
-                    grid: { display: false },
-                    ticks: { color: '#555', font: { weight: '500' } }
-                },
-                y_temp: {
-                    type: 'linear',
-                    position: 'right',
-                    title: { display: true, text: 'Temperature (°F)', color: 'rgb(54, 162, 235)', font: { weight: 'bold' } },
-                    grid: { drawOnChartArea: false },
-                    ticks: { color: 'rgb(54, 162, 235)', font: { weight: '600' } }
-                },
-                y_chance: {
-                    type: 'linear',
-                    position: 'left',
-                    min: 0,
-                    max: 100,
-                    title: { display: true, text: 'Chance of Closure (%)', color: 'rgb(255, 159, 64)', font: { weight: 'bold' } },
-                    grid: {
-                        color: '#e9e9e9',
-                        drawBorder: false,
-                        borderDash: [5, 5] // Make grid lines dashed
+                scales: {
+                    x: {
+                        grid: { display: false },
+                        ticks: { color: '#555', font: { weight: '500' } }
                     },
-                    ticks: {
-                        color: 'rgb(255, 159, 64)',
-                        font: { weight: '600' },
-                        callback: (value) => value + '%',
-                        stepSize: 20
+                    y_temp: {
+                        type: 'linear',
+                        position: 'right',
+                        title: { display: true, text: 'Temperature (°F)', color: 'rgb(54, 162, 235)', font: { weight: 'bold' } },
+                        grid: { drawOnChartArea: false },
+                        ticks: { color: 'rgb(54, 162, 235)', font: { weight: '600' } }
+                    },
+                    y_chance: {
+                        type: 'linear',
+                        position: 'left',
+                        min: 0,
+                        max: 100,
+                        title: { display: true, text: 'Chance of Closure (%)', color: 'rgb(255, 159, 64)', font: { weight: 'bold' } },
+                        grid: {
+                            color: '#e9e9e9',
+                            drawBorder: false,
+                            borderDash: [5, 5] // Make grid lines dashed
+                        },
+                        ticks: {
+                            color: 'rgb(255, 159, 64)',
+                            font: { weight: '600' },
+                            callback: (value) => value + '%',
+                            stepSize: 20
+                        }
                     }
                 }
             }
-        }
-    });
+        });
 
-    const wrap = document.getElementById("forecastResults");
-    wrap.innerHTML = currentForecast.map(d => {
-      const chanceText = d.snow ? 'Chance of Closure' : 'Precipitation Chance';
-      const footerText = d.snow ? '❄️ Schools likely closed! Stay safe!' : '☀️ Normal school day expected.';
-      const tempPercent = Math.max(0, Math.min(100, Number(d.temp) + 10)); // Scale temp for graph
+        const wrap = document.getElementById("forecastResults");
+        wrap.innerHTML = currentForecast.map(d => {
+            const chanceText = d.snow ? 'Chance of Closure' : 'Precipitation Chance';
+            const footerText = d.snow ? '❄️ Schools likely closed! Stay safe!' : '☀️ Normal school day expected.';
+            const tempPercent = Math.max(0, Math.min(100, Number(d.temp) + 10)); // Scale temp for graph
 
-      return `
+            return `
         <div class="forecast-card ${d.snow ? 'snow-day' : 'clear-day'}">
             <div class="card-header">
                 <div class="date">${d.date}</div>
@@ -279,39 +294,34 @@ async function calculateProbability() {
             <div class="card-footer">${footerText}</div>
         </div>
       `;
-    }).join("");
+        }).join("");
 
-    injectStructuredData(currentForecast, currentAddress);
-    success = true;
+        injectStructuredData(currentForecast, currentAddress);
 
-  } catch (e) {
-    console.error(e);
-    if (e === "Location outside the US") {
-      alert("The address you entered is outside the U.S. Please enter a valid U.S. location.");
-      addressInput.value    = "";
-      stateSelect.disabled  = false;
-      zipcodeInput.disabled = true;
-    } else {
-      alert(`Error: ${e}`);
+        // Final UI update
+        loader.style.display = "none";
+        document.getElementById("results").style.display = "block";
+        showInputs(false);
+        document.getElementById("incomingQueries").style.display = "none";
+
+    } catch (e) {
+        // --- ERROR PATH ---
+        loader.style.display = "none"; // Hide loader immediately
+        console.error(e);
+
+        if (e === "Location outside the US") {
+            alert("The address you entered is outside the U.S. Please enter a valid U.S. location.");
+            resetCalculator(); // Reset UI to initial state for user to try again
+        } else {
+            // For other errors, show an alert and display an error card
+            alert(`Error: ${e}`);
+            document.getElementById("forecastResults").innerHTML =
+                `<div class="forecast-card">❌ Error: ${e}</div>`;
+            document.getElementById("results").style.display = "block";
+            showInputs(false);
+            document.getElementById("incomingQueries").style.display = "none";
+        }
     }
-    document.getElementById("forecastResults").innerHTML =
-      `<div class="forecast-card">❌ Error: ${e}</div>`
-    // Show the results container even on error to display the message
-    document.getElementById("results").style.display = "block";
-    showInputs(false);
-  } finally {
-    const elapsedTime = Date.now() - startTime;
-    const remainingTime = 7000 - elapsedTime;
-    if (remainingTime > 0) {
-      await new Promise(resolve => setTimeout(resolve, remainingTime));
-    }
-    loader.style.display = "none";
-    if (success) {
-      document.getElementById("results").style.display = "block";
-      showInputs(false);
-      document.getElementById("incomingQueries").style.display = "none";
-    }
-  }
 }
 
 /* ========= reset ========= */
