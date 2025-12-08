@@ -96,6 +96,11 @@
 /* Online Users Counter */
 .online-users { color: #fff; font-size: 0.9rem; margin-left: auto; padding-right: 2rem; }
 @media (max-width: 820px) { .online-users { display: none; } }
+
+/* Fade effect for online user count */
+#online-users-count {
+    transition: opacity 0.3s ease-in-out;
+}
 </style>
 <header class="header">
     <?php

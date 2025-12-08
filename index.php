@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="/styles/incoming-queries.css" />
         <link rel="stylesheet" href="/styles/blogs.css" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-PXCGN0JB4F"></script>
@@ -185,6 +186,13 @@
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" x2="12" y1="20" y2="10"></line><line x1="18" x2="18" y1="20" y2="4"></line><line x1="6" x2="6" y1="20" y2="16"></line></svg>
                     Snow-Day Calculator Forecasts
                 </h3>
+                <div class="chart-container">
+                    <canvas id="forecastChart"></canvas>
+                </div>
+                <h2 class="results-subtitle">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                    Day by Day Predictions Report
+                </h2>
                 <div id="forecastResults"></div>
                 <div style="display:flex;flex-direction:column;gap:1rem">
                     <button onclick="generatePDF()">
@@ -406,8 +414,16 @@
                 fetch('/includes/online_users.php')
                     .then(response => response.json())
                     .then(data => {
-                        if (data.online_users !== undefined) {
-                            counterElement.textContent = data.online_users;
+                        // Only update if the count has changed
+                        if (data.online_users !== undefined && counterElement.textContent !== data.online_users.toString()) {
+                            // Fade out
+                            counterElement.style.opacity = '0';
+
+                            // Wait for fade out, then update text and fade in
+                            setTimeout(() => {
+                                counterElement.textContent = data.online_users;
+                                counterElement.style.opacity = '1';
+                            }, 300); // This should match the CSS transition duration
                         }
                     })
                     .catch(error => {

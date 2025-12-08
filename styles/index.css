@@ -145,6 +145,24 @@ button:hover{filter:brightness(.9)}
     gap: 0.5em;
 }
 
+/* Chart Container */
+.chart-container {
+    position: relative;
+    height: 300px;
+    width: 95%;
+    max-width: 800px;
+    margin: 2rem auto;
+    background: #fff; /* Pure white canvas background */
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,.08);
+}
+
+.results-subtitle {
+    font-size: 1.45rem; color: var(--primary); margin-top: 2rem; margin-bottom: 1rem;
+    display: flex; justify-content: center; align-items: center; gap: 0.5em;
+}
+
 /* forecast cards */
 .forecast-card {
     background: var(--card-bg);
@@ -392,6 +410,15 @@ button:hover{filter:brightness(.9)}
 
     /* Adjust results heading for mobile */
     .results h3 {
+        font-size: 1.25rem;
+    }
+
+    .chart-container {
+        height: 250px; /* Reduce height on mobile */
+        padding: 0.5rem;
+    }
+
+    .results-subtitle {
         font-size: 1.25rem;
     }
 

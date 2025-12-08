@@ -7,6 +7,7 @@ const loader         = document.getElementById("loader");
 
 let currentForecast = [];
 let currentAddress  = "";  // store the last‐used address
+let forecastChart   = null; // To hold the chart instance
 
 /* ========= input behaviour ========= */
 stateSelect.addEventListener("change", () => {
@@ -131,6 +132,109 @@ async function calculateProbability() {
     const periods = await callApiChain(addr);
     currentForecast = processForecast(periods);
 
+    // Destroy previous chart if it exists, then create the new one
+    if (forecastChart) {
+        forecastChart.destroy();
+    }
+    const ctx = document.getElementById('forecastChart').getContext('2d');
+
+    // Create a new gradient for the 'Chance' area chart
+    const chanceGradient = ctx.createLinearGradient(0, 0, 0, 300);
+    chanceGradient.addColorStop(0, 'rgba(255, 159, 64, 0.6)'); // Warm orange
+    chanceGradient.addColorStop(1, 'rgba(255, 159, 64, 0.1)');
+
+    forecastChart = new Chart(ctx, {
+        type: 'line', // Change base type to line to allow layering
+        data: {
+            labels: currentForecast.map(d => d.date),
+            datasets: [{
+                label: 'Chance of Closure (%)',
+                data: currentForecast.map(d => d.chance),
+                borderColor: 'rgb(255, 159, 64)',
+                backgroundColor: chanceGradient,
+                fill: true,
+                tension: 0.4,
+                yAxisID: 'y_chance',
+                order: 2 // Draw this area chart behind the temperature line
+            }, {
+                label: 'Temperature (°F)',
+                data: currentForecast.map(d => d.temp),
+                borderColor: 'rgb(54, 162, 235)', // Cool blue for temperature
+                backgroundColor: 'transparent',
+                yAxisID: 'y_temp',
+                tension: 0.4,
+                pointBackgroundColor: '#fff',
+                pointBorderColor: 'rgb(54, 162, 235)',
+                pointHoverRadius: 7,
+                pointHoverBorderWidth: 2,
+                pointRadius: 5,
+                order: 1 // Ensure this line is drawn on top
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            interaction: {
+                mode: 'index',
+                intersect: false,
+            },
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                    labels: {
+                        color: '#444',
+                        font: {
+                            family: "'Segoe UI', system-ui, sans-serif",
+                            weight: '600'
+                        }
+                    }
+                },
+                tooltip: {
+                    backgroundColor: 'rgba(0, 0, 0, 0.75)',
+                    titleFont: { size: 14, weight: 'bold', family: "'Segoe UI', system-ui, sans-serif" },
+                    bodyFont: { size: 12, family: "'Segoe UI', system-ui, sans-serif" },
+                    padding: 10,
+                    cornerRadius: 4,
+                    displayColors: true,
+                    boxPadding: 4,
+                    borderColor: 'rgba(255,255,255,0.2)',
+                    borderWidth: 1,
+                }
+            },
+            scales: {
+                x: {
+                    grid: { display: false },
+                    ticks: { color: '#555', font: { weight: '500' } }
+                },
+                y_temp: {
+                    type: 'linear',
+                    position: 'right',
+                    title: { display: true, text: 'Temperature (°F)', color: 'rgb(54, 162, 235)', font: { weight: 'bold' } },
+                    grid: { drawOnChartArea: false },
+                    ticks: { color: 'rgb(54, 162, 235)', font: { weight: '600' } }
+                },
+                y_chance: {
+                    type: 'linear',
+                    position: 'left',
+                    min: 0,
+                    max: 100,
+                    title: { display: true, text: 'Chance of Closure (%)', color: 'rgb(255, 159, 64)', font: { weight: 'bold' } },
+                    grid: {
+                        color: '#e9e9e9',
+                        drawBorder: false,
+                        borderDash: [5, 5] // Make grid lines dashed
+                    },
+                    ticks: {
+                        color: 'rgb(255, 159, 64)',
+                        font: { weight: '600' },
+                        callback: (value) => value + '%',
+                        stepSize: 20
+                    }
+                }
+            }
+        }
+    });
+
     const wrap = document.getElementById("forecastResults");
     wrap.innerHTML = currentForecast.map(d => {
       const chanceText = d.snow ? 'Chance of Closure' : 'Precipitation Chance';
@@ -220,6 +324,13 @@ function resetCalculator() {
   addressInput.disabled  = false;
   document.getElementById("forecastResults").innerHTML = "";
   document.getElementById("results").style.display      = "none";
+
+  // Destroy the chart instance if it exists
+  if (forecastChart) {
+    forecastChart.destroy();
+    forecastChart = null;
+  }
+
   showInputs(true);
   document.getElementById("incomingQueries").style.display = "block";
   window.scrollTo({ top: 0, behavior: 'smooth' });
