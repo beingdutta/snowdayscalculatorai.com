@@ -103,7 +103,7 @@ function processForecast(periods) {
     const avg = inF.popCnt ? Math.round(inF.popSum / inF.popCnt) : 0;
     return {
       isoDate: k,  // raw YYYY-MM-DD for JSON-LD
-      date:     new Date(k).toLocaleDateString('en-US',{ weekday:'long', month:'short', day:'numeric' }),
+      date:     new Date(k).toLocaleDateString('en-US',{ weekday:'short', month:'short', day:'numeric' }),
       snow:     inF.snow,
       temp:     inF.temp,
       forecast: inF.forecast,
@@ -153,6 +153,9 @@ async function calculateProbability() {
         }
         const ctx = document.getElementById('forecastChart').getContext('2d');
 
+        // Check for mobile screen size to adjust chart options
+        const isMobile = window.innerWidth <= 600;
+
         // Create a new gradient for the 'Chance' area chart
         const chanceGradient = ctx.createLinearGradient(0, 0, 0, 300);
         chanceGradient.addColorStop(0, 'rgba(255, 159, 64, 0.6)'); // Warm orange
@@ -196,6 +199,7 @@ async function calculateProbability() {
                 plugins: {
                     legend: {
                         position: 'bottom',
+                        display: !isMobile, // Hide legend on mobile
                         labels: {
                             color: '#444',
                             font: {
@@ -224,7 +228,7 @@ async function calculateProbability() {
                     y_temp: {
                         type: 'linear',
                         position: 'right',
-                        title: { display: true, text: 'Temperature (°F)', color: 'rgb(54, 162, 235)', font: { weight: 'bold' } },
+                        title: { display: !isMobile, text: 'Temperature (°F)', color: 'rgb(54, 162, 235)', font: { weight: 'bold' } },
                         grid: { drawOnChartArea: false },
                         ticks: { color: 'rgb(54, 162, 235)', font: { weight: '600' } }
                     },
@@ -233,7 +237,7 @@ async function calculateProbability() {
                         position: 'left',
                         min: 0,
                         max: 100,
-                        title: { display: true, text: 'Chance of Closure (%)', color: 'rgb(255, 159, 64)', font: { weight: 'bold' } },
+                        title: { display: !isMobile, text: 'Chance of Closure (%)', color: 'rgb(255, 159, 64)', font: { weight: 'bold' } },
                         grid: {
                             color: '#e9e9e9',
                             drawBorder: false,
@@ -255,9 +259,10 @@ async function calculateProbability() {
             const chanceText = d.snow ? 'Chance of Closure' : 'Precipitation Chance';
             const footerText = d.snow ? '❄️ Schools likely closed! Stay safe!' : '☀️ Normal school day expected.';
             const tempPercent = Math.max(0, Math.min(100, Number(d.temp) + 10)); // Scale temp for graph
+            const snowDayStyle = d.snow ? 'style="background-color: #fff3cd; border: 2px solid #ffc107; box-shadow: 0 4px 15px rgba(255, 193, 7, 0.25);"' : '';
 
             return `
-        <div class="forecast-card ${d.snow ? 'snow-day' : 'clear-day'}">
+        <div class="forecast-card ${d.snow ? 'snow-day' : 'clear-day'}" ${snowDayStyle}>
             <div class="card-header">
                 <div class="date">${d.date}</div>
                 <div class="status">${d.snow ? 'Snow Day Likely' : 'Clear Day'}</div>
