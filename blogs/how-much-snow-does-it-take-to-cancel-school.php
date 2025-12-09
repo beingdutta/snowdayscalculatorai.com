@@ -89,12 +89,12 @@
         If you are hoping for a magical number—like "4 inches guarantees a snow day"—we have bad news. The math is much more complicated than that. A snowstorm that shuts down the entire state of Georgia might not even cause a delay in Minnesota.
       </p>
       <p>
-        The decision to close school is a delicate balance of meteorology, infrastructure, and safety. If you are frantically searching "<em>will there be a snow day tomorrow</em>," you need to understand the variables at play. Here is the deep dive into what actually triggers a closure, region by region.
+        The decision to close school is a delicate balance of meteorology, infrastructure, and safety. If you are frantically searching "will there be a snow day tomorrow," you need to understand the variables at play. Here is the deep dive into what actually triggers a closure, region by region.
       </p>
 
       <h3>The "Inch Count" Myth: Why Location is Everything</h3>
       <p>
-        When you use a <em>snow day calculator</em>, the first thing it asks for is your Zip Code. This isn't just to get the weather; it's to determine your region's "Snow Tolerance."
+        When you use a snow day calculator, the first thing it asks for is your Zip Code. This isn't just to get the weather; it's to determine your region's "Snow Tolerance."
       </p>
       <p>
         Infrastructure dictates the threshold. Here is how the numbers break down across North America:

@@ -139,5 +139,33 @@
                 hamburgerBtn.setAttribute('aria-expanded', isExpanded);
             });
         }
+
+        // --- Online Users Counter Logic ---
+        function updateOnlineUsers() {
+            const counterElement = document.getElementById('online-users-count');
+            if (!counterElement) return;
+
+            fetch('/includes/online_users.php')
+                .then(response => response.json())
+                .then(data => {
+                    // Only update if the count has changed from the initial '...' or the previous value
+                    if (data.online_users !== undefined && counterElement.textContent !== data.online_users.toString()) {
+                        // Fade out
+                        counterElement.style.opacity = '0';
+
+                        // Wait for fade out, then update text and fade in
+                        setTimeout(() => {
+                            counterElement.textContent = data.online_users;
+                            counterElement.style.opacity = '1';
+                        }, 300); // This should match the CSS transition duration
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching online users:', error);
+                    counterElement.textContent = 'N/A';
+                });
+        }
+        updateOnlineUsers(); // Initial call on DOM load
+        setInterval(updateOnlineUsers, 30000); // And update every 30 seconds
     });
 </script>
