@@ -73,7 +73,7 @@
   <?php include __DIR__ . '/../navigations/header.php'; ?>
 
   <main class="article-wrapper">
-    <img src="https://images.unsplash.com/photo-1516728778615-2d590ea1855e?q=80&w=2071&auto=format&fit=crop" alt="Cozy bedroom window with snow falling outside" class="article-map" />
+    <img src="/assets/blog_images/chance-of-snow-day-tomorrow.jpg" alt="Cozy bedroom window with snow falling outside" class="article-map" />
 
     <h1 class="article-title">Snow Day Superstitions vs. The Snow Calculator: Do Spoons Under Pillows Work?</h1>
 
@@ -133,7 +133,7 @@
         The idea here is "inversion." By inverting your clothing, you are asking the universe to invert the natural order of things (i.e., turning a school day into a home day). Some variations of this legend require you to wear the pajamas inside out <em>and</em> backwards.
       </p>
       <p>
-        There is a communal aspect to this one. On social media, you will often see students posting selfies of their inverted PJs with captions like "<strong>chances of snow day tomorrow</strong> looking good!" It creates a sense of shared hope.
+        There is a communal aspect to this one. On social media, you will often see students posting selfies of their inverted PJs with captions like "chances of snow day tomorrow looking good!" It creates a sense of shared hope.
       </p>
 
       <h4>The Verdict vs. The Calculator</h4>
@@ -144,8 +144,8 @@
         If the temperature is 34°F and raining, wearing your pajamas inside out won't turn that rain to snow. But if the temperature drops to 31°F, you can claim credit for it.
       </p>
       <p>
-        <strong>Success Rate:</strong> Zero impact on weather, high impact on team spirit.
-        <br><strong>Comfort Level:</strong> Low (tags scratching your neck).
+        Success Rate: Zero impact on weather, high impact on team spirit.
+        <br>Comfort Level: Low (tags scratching your neck).
       </p>
 
       <br>
@@ -176,8 +176,8 @@
         In fact, this ritual is often counter-productive in the South. In places like Atlanta or Dallas, an ice day calculator (which is what you really need there) will tell you that you don't need <em>inches</em> of snow; you just need a layer of ice. Flushing cubes might be overkill.
       </p>
       <p>
-        <strong>Success Rate:</strong> Low.
-        <br><strong>Plumbing Risk:</strong> Moderate.
+        Success Rate: Low.
+        <br>Plumbing Risk: Moderate.
       </p>
 
       <h3>Ritual #4: The White Crayon on the Windowsill</h3>
@@ -244,7 +244,7 @@
       </p>
 
       <br>
-      <img src="https://images.unsplash.com/photo-1457269449834-928af640684d?q=80&w=2074&auto=format&fit=crop" alt="Snow covered trees in a winter forest" style="width:100%; border-radius: 8px; margin: 20px 0;" />
+      <img src="/assets/blog_images/snow-day-calculator-2025.jpg" alt="Snow covered trees in a winter forest" style="width:100%; border-radius: 8px; margin: 20px 0;" />
       <br>
 
       <h3>Why We Still Do The Rituals</h3>
@@ -266,7 +266,7 @@
         You don't have to choose between science and magic. The best strategy is to use both.
       </p>
       <p>
-        <strong>Step 1: The Data Check.</strong> Before bed, run your zip code through the snow day calculator.
+        Step 1: The Data Check. Before bed, run your zip code through the snow day calculator.
         <br>
         * If it says 10%: Do your homework. The spoon won't save you.
         <br>
@@ -275,10 +275,10 @@
         * If it says 90%: You are safe.
       </p>
       <p>
-        <strong>Step 2: The Ritual.</strong> Once you have the data, perform the ritual of your choice. Think of it as insurance. The calculator predicts the odds; the spoon tips the scale.
+        Step 2: The Ritual. Once you have the data, perform the ritual of your choice. Think of it as insurance. The calculator predicts the odds; the spoon tips the scale.
       </p>
       <p>
-        <strong>Step 3: The Verification.</strong> In the morning, check your phone. If you are asking "is it snow day today" or "is there a snow day today," don't look under your pillow  look at the school website.
+        Step 3: The Verification. In the morning, check your phone. If you are asking "is it snow day today" or "is there a snow day today," don't look under your pillow  look at the school website.
       </p>
 
       <h3>A Note on "Fake News" Snow Days</h3>

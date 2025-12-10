@@ -149,7 +149,7 @@
         Accuracy depends on granularity. A statewide forecast is useless. That is why the snow day calculator app asks for your Zip Code and School Type.
       </p>
       <p>
-        <strong>Private Schools vs. Public Schools:</strong> Public schools rely on yellow buses and complex routes, making them more likely to close. Private schools often have parents drop off students, making them slightly more resilient to snow (though not immune). The calculator adjusts the odds based on the institution type you select.
+        Private Schools vs. Public Schools: Public schools rely on yellow buses and complex routes, making them more likely to close. Private schools often have parents drop off students, making them slightly more resilient to snow (though not immune). The calculator adjusts the odds based on the institution type you select.
       </p>
 
       <h3>Summary</h3>

@@ -108,7 +108,7 @@
         Schools are required by state law to be open for a certain number of days per year (usually 180). If they close for a snow day, they have to "pay it back" by taking away a vacation day in April or adding a day in June. No one wants to be in school in late June.
       </p>
       <p>
-        A Delayed Opening, however, <strong>counts as a full day</strong>.
+        A Delayed Opening, however, counts as a full day.
       </p>
       <p>
         Even though you are only there for 4 or 5 hours, the state counts it. It is a loophole. It allows the Superintendent to keep everyone safe (by waiting for the plows) without ruining summer vacation.
@@ -127,12 +127,12 @@
         Road crews typically need about 3 hours to clear the main arteries of a town after a storm ends.
       </p>
       <ul>
-        <li><strong>Scenario A (Snow stops at 2:00 AM):</strong> By 5:00 AM, the roads are clear. Buses run on time. <strong>Result: Normal Day.</strong></li>
-        <li><strong>Scenario B (Snow stops at 9:00 AM):</strong> The morning commute is ruined. Buses cannot drive during the storm. <strong>Result: Snow Day.</strong></li>
-        <li><strong>Scenario C (Snow stops at 5:30 AM):</strong> This is the Goldilocks zone. The roads are messy at 6:00 AM (when high school buses usually start), but they will be fine by 8:00 AM.</li>
+        <li>Scenario A (Snow stops at 2:00 AM): By 5:00 AM, the roads are clear. Buses run on time. Result: Normal Day.</li>
+        <li>Scenario B (Snow stops at 9:00 AM): The morning commute is ruined. Buses cannot drive during the storm. Result: Snow Day.</li>
+        <li>Scenario C (Snow stops at 5:30 AM): This is the Goldilocks zone. The roads are messy at 6:00 AM (when high school buses usually start), but they will be fine by 8:00 AM.</li>
       </ul>
       <p>
-        <strong>The Prediction:</strong> Check the hourly forecast on your <strong>snowday calculator</strong>. If the precipitation chart drops to zero right around sunrise, you are looking at a classic delay scenario.
+        The Prediction: Check the hourly forecast on your snowday calculator. If the precipitation chart drops to zero right around sunrise, you are looking at a classic delay scenario.
       </p>
 
       <h3>Sign #2: The "Sunrise Factor" (Fighting Black Ice)</h3>
@@ -151,7 +151,7 @@
         Superintendents know that the sun usually rises around 7:00 AM in winter. Even on a cloudy day, the solar radiation helps melt the ice. By pushing the start time back two hours (to 9:00 AM or 10:00 AM), they are letting nature do the work for them.
       </p>
       <p>
-        <strong>The Prediction:</strong> If the <strong>chances of snow day tomorrow</strong> are low, but it rained overnight and froze, bet on a delay. The <strong>snow day predictor</strong> often flags this as a "medium" probability event.
+        The Prediction: If the chances of snow day tomorrow are low, but it rained overnight and froze, bet on a delay. The snow day predictor often flags this as a "medium" probability event.
       </p>
       <p>The Prediction: If the chances of snow day tomorrow are low, but it rained overnight and froze, bet on a delay. The snow day predictor often flags this as a "medium" probability event.</p>
 
@@ -177,12 +177,12 @@
         If there is a massive storm on a testing day, they might be forced to close. But if it's a borderline storm? They will almost certainly call a delay to ensure the test happens.
       </p>
       <p>
-        <strong>The Prediction:</strong> If you have a big state test, lower your expectations for a full snow day.
+        The Prediction: If you have a big state test, lower your expectations for a full snow day.
       </p>
 
       <h3>How to Read the Calculator for Delays</h3>
       <p>
-        Our <strong>snowdaycalculator</strong> gives you a single percentage, but you can read between the lines.
+        Our snowdaycalculator gives you a single percentage, but you can read between the lines.
       </p>
       <p>
         The "Delay Zone" is usually 40% - 60%.

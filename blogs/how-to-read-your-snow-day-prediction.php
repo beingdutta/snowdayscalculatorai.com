@@ -73,7 +73,7 @@
   <?php include __DIR__ . '/../navigations/header.php'; ?>
 
   <main class="article-wrapper">
-    <img src="https://images.unsplash.com/photo-1548266652-99cf277df803?q=80&w=2070&auto=format&fit=crop" alt="Person holding a smartphone showing weather forecast in snow" class="article-map" />
+    <img src="/assets/blog_images/chance-of-snow-day.jpg" alt="Person holding a smartphone showing weather forecast in snow" class="article-map" />
 
     <h1 class="article-title">What Does "40% Chance" Really Mean? How to Read Your Snow Day Prediction</h1>
 
@@ -127,7 +127,7 @@
 
       <h4>The "Hope is Dangerous" Zone (0% - 25%)</h4>
       <p>
-        <strong>What it means:</strong> The weather is weak. Maybe it’s just flurries. Maybe it’s rain that <em>might</em> freeze but probably won’t. Maybe the storm is arriving too late (after school starts).
+        What it means: The weather is weak. Maybe it’s just flurries. Maybe it’s rain that <em>might</em> freeze but probably won’t. Maybe the storm is arriving too late (after school starts).
       </p>
       <p>
         The Reality: You are going to school.
@@ -139,7 +139,7 @@
 
       <h4>The "Coin Flip" Zone (26% - 60%)</h4>
       <p>
-        <strong>What it means:</strong> This is the most frustrating zone. It usually indicates a "borderline" event.
+        What it means: This is the most frustrating zone. It usually indicates a "borderline" event.
         <br>maybe the snowfall prediction is right on the edge (e.g., 3 inches).
         <br>Maybe the temperature is hovering exactly at 32°F.
         <br>Maybe the storm timing is tricky (starting right at 5:30 AM).
@@ -244,7 +244,7 @@
         If you have a fun field trip planned for tomorrow, a 20% chance looks like a threat. You will worry it's actually 50%.
       </p>
       <p>
-        Be aware of your own bias. The calculator is neutral; you are not. When you ask "<strong>is there a snow day today</strong>," make sure you are listening to the data, not just your hopes (or fears).
+        Be aware of your own bias. The calculator is neutral; you are not. When you ask "is there a snow day today," make sure you are listening to the data, not just your hopes (or fears).
       </p>
 
       <br>

@@ -48,11 +48,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <h2>General Support & Feedback</h2>
         <p>For the fastest response regarding calculator results or technical issues, please reach out to our support team. We value your feedback as it helps us improve our accuracy and user experience.</p>
-        <p><strong>Email:</strong> <a href="mailto:admins@snowdayscalculatorai.com">admins@snowdayscalculatorai.com</a></p>
+        <p>Email: <a href="mailto:admins@snowdayscalculatorai.com">admins@snowdayscalculatorai.com</a></p>
 
         <h2>Media & Partnership Inquiries</h2>
         <p>For all media requests, interviews, or partnership opportunities, please contact our communications team.</p>
-        <p><strong>Email:</strong> <a href="mailto:admins@snowdayscalculatorai.com">admins@snowdayscalculatorai.com</a></p>
+        <p>Email: <a href="mailto:admins@snowdayscalculatorai.com">admins@snowdayscalculatorai.com</a></p>
 
         <h2>Send Us a Message Directly</h2>
         <?php if ($message_sent): ?>

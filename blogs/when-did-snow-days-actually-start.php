@@ -73,7 +73,7 @@
   <?php include __DIR__ . '/../navigations/header.php'; ?>
 
   <main class="article-wrapper">
-    <img src="https://images.unsplash.com/photo-1518182170546-07fa6ee049cb?q=80&w=2070&auto=format&fit=crop" alt="Vintage photo of children walking to school in snow" class="article-map" />
+    <img src="/assets/blog_images/snow-day-probability.jpg" alt="Vintage photo of children walking to school in snow" class="article-map" />
 
     <h1 class="article-title">The History of the Snow Day: When Did It Start?</h1>
 
@@ -102,9 +102,9 @@
         In the era of the one-room schoolhouse, education was hyper-local. Most students lived within walking distance (or horse-riding distance) of their school. Because there were no buses to coordinate and no highways to plow, the concept of a centralized "closure" didn't exist.
       </p>
       <p>
-        <strong>The Rules of the 1800s:</strong>
-        <br>1. <strong>The Teacher Lived There:</strong> Often, the teacher boarded with a local family or lived in the back of the school. If the teacher was there, school was open.
-        <br>2. <strong>Attendance was Optional-ish:</strong> Education wasn't as standardized. If a blizzard hit, half the class might stay home to help with the farm animals. The school remained "open" for the three kids who showed up, but no one was penalized for missing it.
+        The Rules of the 1800s:
+        <br>1. The Teacher Lived There: Often, the teacher boarded with a local family or lived in the back of the school. If the teacher was there, school was open.
+        <br>2. Attendance was Optional-ish: Education wasn't as standardized. If a blizzard hit, half the class might stay home to help with the farm animals. The school remained "open" for the three kids who showed up, but no one was penalized for missing it.
       </p>
       <p>
         There was no snow day predictor because the weather was just a fact of life, not a scheduling conflict.
@@ -114,7 +114,7 @@
 
       <h3>The 1920s-1940s: The Rise of the Yellow Bus</h3>
       <p>
-        The Snow Day as we know it was born not because of snow, but because of the <strong>School Bus</strong>.
+        The Snow Day as we know it was born not because of snow, but because of the School Bus.
       </p>
       <p>
         As education modernized, tiny rural schools consolidated into larger centralized buildings. Suddenly, students weren't walking down the lane; they were traveling 10 or 15 miles from the next town over.
@@ -138,8 +138,8 @@
       </p>
       <p>
         Imagine the tension. You are lying in bed. It's 6:29 AM. You are straining your ears, waiting for a sound in the distance.
-        <br>* <strong>One Blast:</strong> School is Open.
-        <br>* <strong>Three Blasts:</strong> School is Closed.
+        <br>* One Blast: School is Open.
+        <br>* Three Blasts: School is Closed.
       </p>
       <p>
         It was primitive, but it worked. It was the first time an entire community shared the simultaneous joy of a snow day.
@@ -206,7 +206,7 @@
         For a moment, it seemed like the traditional Snow Day was extinct. Articles were written: "The Death of the Snow Day." "No More Sledding."
       </p>
       <p>
-        But something unexpected happened. <strong>We fought back.</strong>
+        But something unexpected happened. We fought back.
       </p>
       <p>
         Parents, psychologists, and students revolted. They argued that the snow day wasn't just about road safety; it was a mental health necessity. It was a day of unexpected joy in a stressful world.

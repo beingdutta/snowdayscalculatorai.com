@@ -91,13 +91,13 @@
         The logistical gymnastics begin. Who stays home? Do you call in sick? Is the neighbor available? Can you work with a 6-year-old asking for snacks every 15 minutes?
       </p>
       <p>
-        We built the <strong>snow day calculator</strong> for students, but let’s be honest: the people who really need it are the parents.
+        We built the snow day calculator for students, but let’s be honest: the people who really need it are the parents.
       </p>
       <p>
-        Knowing the <strong>chances of snow day tomorrow</strong> isn't just about hope; it's about strategy. It’s about securing a babysitter before the other parents do. It’s about moving that Zoom call. It’s about buying the extra box of mac and cheese <em>before</em> the grocery store is empty.
+        Knowing the chances of snow day tomorrow isn't just about hope; it's about strategy. It’s about securing a babysitter before the other parents do. It’s about moving that Zoom call. It’s about buying the extra box of mac and cheese <em>before</em> the grocery store is empty.
       </p>
       <p>
-        Here is the adult’s guide to using the <strong>snow day predictor</strong> to survive the winter.
+        Here is the adult’s guide to using the snow day predictor to survive the winter.
       </p>
 
       <h3>The "Night Before" Protocol: Evaluating the Odds</h3>
@@ -118,18 +118,18 @@
       <p>
         What it means: This is the "Coin Flip." It usually signals a messy commute or a potential Delayed Opening.
         <br>Action Plan:
-        <br>1. <strong>The "Soft" Warning:</strong> Tell your boss/team, "Hey, weather looks iffy tomorrow, I might be logging on a bit late."
-        <br>2. <strong>The Backup Check:</strong> Text your partner or your backup childcare option: "Heads up, we might have a situation tomorrow."
-        <br>3. <strong>Delay Prep:</strong> If school starts 2 hours late, who drives them? Figure that out now, not at 6 AM.
+        <br>1. The "Soft" Warning: Tell your boss/team, "Hey, weather looks iffy tomorrow, I might be logging on a bit late."
+        <br>2. The Backup Check: Text your partner or your backup childcare option: "Heads up, we might have a situation tomorrow."
+        <br>3. Delay Prep: If school starts 2 hours late, who drives them? Figure that out now, not at 6 AM.
       </p>
 
       <h4>61% - 90% (Action Stations)</h4>
       <p>
         What it means: A closure is highly likely.
         <br>Action Plan:
-        <br>1. <strong>The "Hard" Cancel:</strong> Reschedule non-essential morning meetings.
-        <br>2. <strong>The Grocery Run:</strong> Do you have lunch food? You are about to feed everyone an extra meal tomorrow.
-        <br>3. <strong>Screen Time Rules:</strong> Decide now: Are they watching movies all day? (Answer: Yes, probably, and that's okay).
+        <br>1. The "Hard" Cancel: Reschedule non-essential morning meetings.
+        <br>2. The Grocery Run: Do you have lunch food? You are about to feed everyone an extra meal tomorrow.
+        <br>3. Screen Time Rules: Decide now: Are they watching movies all day? (Answer: Yes, probably, and that's okay).
       </p>
 
       <h4>91% - 100% (Surrender)</h4>
@@ -158,7 +158,7 @@
 
       <h3>Managing Expectations (Don't Be the Bad Guy)</h3>
       <p>
-        Here is the golden rule of parenting during winter: <strong>Never promise a snow day.</strong>
+        Here is the golden rule of parenting during winter: Never promise a snow day.
       </p>
       <p>
         If you tell your child, "It looks like a snow day tomorrow!", and they wake up to a green lawn and a school bus, they will be devastated. And they will blame you.

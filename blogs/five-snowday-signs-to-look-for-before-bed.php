@@ -78,7 +78,7 @@
   <?php include __DIR__ . '/../navigations/header.php'; ?>
 
   <main class="article-wrapper">
-    <img src="https://images.unsplash.com/photo-1483664852095-d6cc6870702d?q=80&w=2070&auto=format&fit=crop" alt="Person looking out window at heavy snow at night" class="article-map" />
+    <img src="/assets/blog_images/snow-day-possibility.jpg" alt="Person looking out window at heavy snow at night" class="article-map" />
 
     <h1 class="article-title">Will I Have a Snow Day Tomorrow? 5 Signs to Look For Before Bed</h1>
 
@@ -100,7 +100,7 @@
       </p>
 
       <br>
-      <img src="https://images.unsplash.com/photo-1547531455-c205dc9688a0?q=80&w=2070&auto=format&fit=crop" alt="Snow plow clearing roads at night" style="width:100%; border-radius: 8px; margin: 20px 0;" />
+      <img src="/assets/blog_images/chances-of-snow-day-tomorrow.jpg" alt="Snow plow clearing roads at night" style="width:100%; border-radius: 8px; margin: 20px 0;" />
       <br>
 
       <h3>Sign #1: The "Pink" on the Radar (Ice vs. Snow)</h3>
@@ -144,7 +144,7 @@
       </p>
 
       <br>
-      <img src="https://images.unsplash.com/photo-1605711200080-6060c55f5286?q=80&w=2071&auto=format&fit=crop" alt="School bus driving on snowy road" style="width:100%; border-radius: 8px; margin: 20px 0;" />
+      <img src="/assets/blog_images/snow-day-percentage.jpg" alt="School bus driving on snowy road" style="width:100%; border-radius: 8px; margin: 20px 0;" />
       <br>
 
       <h3>Sign #3: The "Domino Effect" (Watch Your Neighbors)</h3>

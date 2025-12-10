@@ -73,7 +73,7 @@
   <?php include __DIR__ . '/../navigations/header.php'; ?>
 
   <main class="article-wrapper">
-    <img src="https://images.unsplash.com/photo-1548266652-99cf277df803?q=80&w=2070&auto=format&fit=crop" alt="Students walking on a snowy university campus" class="article-map" />
+    <img src="/assets/blog_images/snow-day-calculator-accuweather.jpg" alt="Students walking on a snowy university campus" class="article-map" />
 
     <h1 class="article-title">Do Colleges Have Snow Days? Using the Calculator for Campus Closures</h1>
 
@@ -153,10 +153,10 @@
         If Dr. Smith can't get his Honda Civic out of the driveway, class is cancelled. It doesn't matter what the Dean says.
       </p>
       <p>
-        <strong>How to Predict the Rogue Cancellation:</strong>
-        <br>1. <strong>Where do they live?</strong> Do they commute from a different town?
-        <br>2. <strong>How old are they?</strong> Older professors are often more cautious about driving in ice.
-        <br>3. <strong>Are they tech-savvy?</strong> A tech-savvy professor might just switch the class to Zoom (the "E-Learning" trap). A strictly old-school professor might just email you saying "Class Cancelled, read Chapter 4."
+        How to Predict the Rogue Cancellation:
+        <br>1. Where do they live? Do they commute from a different town?
+        <br>2. How old are they? Older professors are often more cautious about driving in ice.
+        <br>3. Are they tech-savvy? A tech-savvy professor might just switch the class to Zoom (the "E-Learning" trap). A strictly old-school professor might just email you saying "Class Cancelled, read Chapter 4."
       </p>
       <p>
         Pro Tip: Check your email religiously between 6:00 AM and 8:00 AM. Do not walk to class until you have refreshed your inbox.
@@ -183,7 +183,7 @@
         Public universities are state entities. If the Governor declares a "State of Emergency" and bans non-essential travel on the roads, the University usually <em>has</em> to close. They cannot legally ask staff (custodians, admin assistants, dining staff) to break the law to come to work.
       </p>
       <p>
-        <strong>The Strategy:</strong> Check the news. Is the Governor speaking? If the words "Travel Ban" are used, you can go back to sleep.
+        The Strategy: Check the news. Is the Governor speaking? If the words "Travel Ban" are used, you can go back to sleep.
       </p>
 
       <h4>Step 3: The "Wind Chill" Loophole</h4>
@@ -205,12 +205,12 @@
         Colleges love the "Partial Closure." This is distinct from the K-12 "Delayed Opening."
       </p>
       <ul>
-        <li><strong>"Offices Open, Classes Cancelled":</strong> This means the staff has to come in, but students get the day off. (Rare, but happens).</li>
-        <li><strong>"Classes Before 10:00 AM Cancelled":</strong> This allows the grounds crew to clear the paths. If you have an 8:00 AM lab, you are free. If you have an 11:00 AM lecture, you are still on the hook.</li>
-        <li><strong>"Evening Classes Cancelled":</strong> If a storm is starting at 4:00 PM, they might scrub the night classes to help commuters get home safely.</li>
+        <li>"Offices Open, Classes Cancelled": This means the staff has to come in, but students get the day off. (Rare, but happens).</li>
+        <li>"Classes Before 10:00 AM Cancelled": This allows the grounds crew to clear the paths. If you have an 8:00 AM lab, you are free. If you have an 11:00 AM lecture, you are still on the hook.</li>
+        <li>"Evening Classes Cancelled": If a storm is starting at 4:00 PM, they might scrub the night classes to help commuters get home safely.</li>
       </ul>
       <p>
-        <strong>Reading the Alert:</strong> Read the text carefully. Don't just see "CANCELLED" and go back to bed. Make sure it applies to <em>your</em> specific class time.
+        Reading the Alert: Read the text carefully. Don't just see "CANCELLED" and go back to bed. Make sure it applies to <em>your</em> specific class time.
       </p>
 
       <h3>The Strategy Guide: To Study or Not To Study?</h3>
@@ -234,9 +234,9 @@
 
       <h4>The "Hybrid" Approach (Recommended)</h4>
       <p>
-        1. <strong>Check the Syllabus:</strong> Does your professor use Zoom? If yes, prepare for a remote class. Snow days don't exist in the Zoom era.
-        <br>2. <strong>Study the "Must Knows":</strong> Spend 1 hour reviewing the core concepts. Don't do the deep dive.
-        <br>3. <strong>Set the "Check Alarm":</strong> Set an alarm for 6:00 AM. Wake up, check the website.
+        1. Check the Syllabus: Does your professor use Zoom? If yes, prepare for a remote class. Snow days don't exist in the Zoom era.
+        <br>2. Study the "Must Knows": Spend 1 hour reviewing the core concepts. Don't do the deep dive.
+        <br>3. Set the "Check Alarm": Set an alarm for 6:00 AM. Wake up, check the website.
         <br>    * If Closed: Go back to sleep instantly.
         <br>    * If Open: You have 2 hours to cram the details while drinking coffee.
       </p>

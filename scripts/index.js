@@ -137,7 +137,7 @@ async function calculateProbability() {
         // Update the location display
         const locationElement = document.getElementById('forecastLocation');
         if (locationElement) {
-            locationElement.innerHTML = `Forecast for: <strong>${currentAddress}</strong>`;
+            locationElement.innerHTML = `Forecast for: ${currentAddress}`;
         }
 
         // Ensure loader shows for a minimum time on success

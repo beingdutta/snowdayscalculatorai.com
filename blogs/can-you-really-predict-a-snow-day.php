@@ -73,7 +73,7 @@
   <?php include __DIR__ . '/../navigations/header.php'; ?>
 
   <main class="article-wrapper">
-    <img src="https://images.unsplash.com/photo-1516934024742-b461fba47600?q=80&w=2070&auto=format&fit=crop" alt="Person looking at long range weather forecast on phone" class="article-map" />
+    <img src="/assets/blog_images/snow-day-chances-for-tomorrow.jpg" alt="Person looking at long range weather forecast on phone" class="article-map" />
 
     <h1 class="article-title">Can You Predict a Snow Day 5 Days in Advance?</h1>
 
@@ -139,7 +139,7 @@
         The post goes viral. But 6 hours later, the next run of the GFS shows sunny skies. The amateur accounts don't delete their post. The hype remains, but the storm was never real.
       </p>
       <p>
-        <strong>Rule of Thumb:</strong> If you see a scary snow map on social media more than 5 days out, assume it is a "Fantasy Storm" until a real meteorologist confirms it.
+        Rule of Thumb: If you see a scary snow map on social media more than 5 days out, assume it is a "Fantasy Storm" until a real meteorologist confirms it.
       </p>
 
       <h3>The "Cone of Uncertainty"</h3>
@@ -209,7 +209,7 @@
         When Friday comes and school is open, it hits twice as hard. You are tired, unprepared, and disappointed.
       </p>
       <p>
-        <strong>The Strategy:</strong> Treat a 5-day forecast like a lottery ticket. It’s fun to daydream about winning, but don't quit your job (or stop doing your homework) until you have the cash in hand.
+        The Strategy: Treat a 5-day forecast like a lottery ticket. It’s fun to daydream about winning, but don't quit your job (or stop doing your homework) until you have the cash in hand.
       </p>
 
       <h3>How the Snow Day Calculator Handles Long Range</h3>
@@ -237,7 +237,7 @@
         Use the long-range forecast to get your boots ready and find your shovel. But wait until the night before to trust the percentage.
       </p>
       <p>
-        The magic of a snow day lies in its surprise. If we knew about them a week in advance, they would just be scheduled holidays. The anxiety, the checking, the hope—that’s part of the fun.
+        The magic of a snow day lies in its surprise. If we knew about them a week in advance, they would just be scheduled holidays. The anxiety, the checking, the hope that’s part of the fun.
       </p>
 
       <h3>Frequently Asked Questions</h3>
@@ -264,7 +264,7 @@
 
         <details>
           <summary>What is the most reliable weather model for snow?</summary>
-          <p>Inside of 48 hours, the <strong>European Model (ECMWF)</strong> is statistically the most accurate global model, often beating the American GFS. For short-range (day of), the HRRR is king.</p>
+          <p>Inside of 48 hours, the European Model (ECMWF) is statistically the most accurate global model, often beating the American GFS. For short-range (day of), the HRRR is king.</p>
         </details>
       </div>
 

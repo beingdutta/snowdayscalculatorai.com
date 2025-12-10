@@ -29,7 +29,7 @@
 
         <section class="blog-list">
             <a class="blog-card" href="/blogs/top-ten-funniest-snow-day-rituals">
-                <div class="blog-card-image" style="background-image: url('https://images.unsplash.com/photo-1543328225-b46995c69cb6?q=80&w=2072&auto=format&fit=crop')"></div>
+                <div class="blog-card-image" style="background-image: url('/assets/blog_images/snow-day-calculator.jpg')"></div>
                 <div class="blog-card-content">
                     <h3>Top 10 Funniest Snow Day Rituals from Around the World</h3>
                     <p>From flushing ice cubes to wearing pajamas backwards, discover the top 10 funniest snow day rituals students use to summon a blizzard…</p>
@@ -39,7 +39,7 @@
                 </div>
             </a>
             <a class="blog-card" href="/blogs/guide-for-parents-on-using-snow-day-calculator">
-                <div class="blog-card-image" style="background-image: url('https://images.unsplash.com/photo-1516728778615-2d590ea1855e?q=80&w=2071&auto=format&fit=crop')"></div>
+                <div class="blog-card-image" style="background-image: url('/assets/blog_images/snow-day-predictor.jpg')"></div>
                 <div class="blog-card-content">
                     <h3>The Parent's Guide to the Snow Day Calculator: Planning Childcare</h3>
                     <p>Stop the 5 AM panic. A complete guide for parents on using the Snow Day Calculator to plan childcare, manage work schedules, and predict school closures…</p>
@@ -59,7 +59,7 @@
                 </div>
             </a>
             <a class="blog-card" href="/blogs/can-you-really-predict-a-snow-day">
-                <div class="blog-card-image" style="background-image: url('https://images.unsplash.com/photo-1516934024742-b461fba47600?q=80&w=2070&auto=format&fit=crop')"></div>
+                <div class="blog-card-image" style="background-image: url('/assets/blog_images/snow-day-chances-for-tomorrow.jpg')"></div>
                 <div class="blog-card-content">
                     <h3>Can You Predict a Snow Day 5 Days in Advance?</h3>
                     <p>Can you really predict a snow day 5 days in advance? Learn about the accuracy of long-range weather forecasts and why you should be skeptical of early hype…</p>
@@ -79,7 +79,7 @@
                 </div>
             </a>
             <a class="blog-card" href="/blogs/when-did-snow-days-actually-start">
-                <div class="blog-card-image" style="background-image: url('https://images.unsplash.com/photo-1518182170546-07fa6ee049cb?q=80&w=2070&auto=format&fit=crop')"></div>
+                <div class="blog-card-image" style="background-image: url('/assets/blog_images/snow-day-probability.jpg')"></div>
                 <div class="blog-card-content">
                     <h3>The History of the Snow Day: When Did It Start?</h3>
                     <p>When did snow days actually start? Discover the history of school closures, from rural farm life to the first radio announcements, and how technology changed everything…</p>
@@ -89,7 +89,7 @@
                 </div>
             </a>
             <a class="blog-card" href="/blogs/how-to-read-your-snow-day-prediction">
-                <div class="blog-card-image" style="background-image: url('https://images.unsplash.com/photo-1548266652-99cf277df803?q=80&w=2070&auto=format&fit=crop')"></div>
+                <div class="blog-card-image" style="background-image: url('/assets/blog_images/chance-of-snow-day.jpg')"></div>
                 <div class="blog-card-content">
                     <h3>What Does "40% Chance" Really Mean? How to Read Your Snow Day Prediction</h3>
                     <p>What does a 40% chance of a snow day really mean? Learn how to interpret snow day probabilities, understand the data behind the prediction, and decide whether to do your homework…</p>
@@ -99,7 +99,7 @@
                 </div>
             </a>
             <a class="blog-card" href="/blogs/do-colleges-have-snow-days">
-                <div class="blog-card-image" style="background-image: url('https://images.unsplash.com/photo-1548266652-99cf277df803?q=80&w=2070&auto=format&fit=crop')"></div>
+                <div class="blog-card-image" style="background-image: url('/assets/blog_images/snow-day-calculator-accuweather.jpg')"></div>
                 <div class="blog-card-content">
                     <h3>Do Colleges Have Snow Days? Using the Calculator for Campus Closures</h3>
                     <p>Do colleges actually have snow days? The rules are different for universities. Learn how campus closures work, how to use the snow day calculator for college, and when to email your professor…</p>
@@ -109,7 +109,7 @@
                 </div>
             </a>
             <a class="blog-card" href="/blogs/do-spoons-under-pillows-actually-work">
-                <div class="blog-card-image" style="background-image: url('https://images.unsplash.com/photo-1516728778615-2d590ea1855e?q=80&w=2071&auto=format&fit=crop')"></div>
+                <div class="blog-card-image" style="background-image: url('/assets/blog_images/chance-of-snow-day-tomorrow.jpg')"></div>
                 <div class="blog-card-content">
                     <h3>Snow Day Superstitions vs. The Snow Calculator: Do Spoons Under Pillows Work?</h3>
                     <p>Do spoons under pillows actually work? We test popular snow day superstitions against the Snow Day Calculator to see what really predicts a day off…</p>
@@ -119,7 +119,7 @@
                 </div>
             </a>
             <a class="blog-card" href="/blogs/five-snowday-signs-to-look-for-before-bed">
-                <div class="blog-card-image" style="background-image: url('https://images.unsplash.com/photo-1483664852095-d6cc6870702d?q=80&w=2070&auto=format&fit=crop')"></div>
+                <div class="blog-card-image" style="background-image: url('/assets/blog_images/snow-day-possibility.jpg')"></div>
                 <div class="blog-card-content">
                     <h3>Will I Have a Snow Day Tomorrow? 5 Signs to Look For Before Bed</h3>
                     <p>Will I have a snow day tomorrow? Don't just guess. Here are the 5 critical signs to look for before bed, from ice warnings to the 'Domino Effect,' plus how to use our calculator…</p>

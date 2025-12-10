@@ -340,7 +340,7 @@
                 <div style="display:flex;flex-direction:column;gap:1rem">
                     <div class="feature-callout">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/></svg>
-                        <span><strong>Did you know?</strong> You can now email this report straight to your boss, teacher, or friends!</span>
+                    <span>Did you know? You can now email this report straight to your boss, teacher, or friends!</span>
                     </div>
                     <button onclick="generatePDF()">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16" stroke="currentColor" stroke-width="0.5"><path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/></svg>
@@ -491,7 +491,7 @@
             <div class="popup-box">
                 <button class="popup-close-btn" id="crossClosePopup" aria-label="Close">&times;</button>
                 <h3>Hold On For a Sec Mate!!</h3>
-                <p>Do you run an Airbnb, a cozy café, or a snow-related service? We’d love to support local businesses like yours. List your offering on our site’s front page and enjoy <br><strong style="color: var(--primary);">15 days completely free</strong>.</p>
+            <p>Do you run an Airbnb, a cozy café, or a snow-related service? We’d love to support local businesses like yours. List your offering on our site’s front page and enjoy <br><span style="color: var(--primary);">15 days completely free</span>.</p>
                 <p>After the trial, you can stay featured for a small, budget-friendly charge. Let’s help your business <br><br> <u>Shine this snow season together.</u></p>
                 <div class="popup-buttons">
                     <a href="/contact" class="popup-btn primary">Reach out to us</a>

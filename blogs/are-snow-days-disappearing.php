@@ -91,7 +91,7 @@
         If the planet is getting hotter, doesn't that mean the end of the snow day?
       </p>
       <p>
-        Well, hold on. The answer is surprisingly complicated. Climate change isn't just "Global Warming." It’s "Global Weirding." And while it might mean fewer days of gentle flurries, it could actually mean <em>more</em> catastrophic blizzards, more ice storms, and more days off school—just not in the way you expect.
+        Well, hold on. The answer is surprisingly complicated. Climate change isn't just "Global Warming." It’s "Global Weirding." And while it might mean fewer days of gentle flurries, it could actually mean <em>more</em> catastrophic blizzards, more ice storms, and more days off school  just not in the way you expect.
       </p>
       <p>
         Today, we are going to dive into the strange science of winter in a warming world, why you should be checking the ice day calculator more than the snow one, and what the future holds for the most beloved tradition in education.
@@ -115,8 +115,8 @@
       </p>
       <p>
         For students asking "will I have a snow day tomorrow," this means the "maybe" days are disappearing. We are moving toward an "All or Nothing" winter.
-        <br>* <strong>Old Winter:</strong> Five days of 2-inch snows (Schools stay open).
-        <br>* <strong>New Winter:</strong> One day of 15-inch snow (Schools close for 3 days).
+        <br>* Old Winter: Five days of 2-inch snows (Schools stay open).
+        <br>* New Winter: One day of 15-inch snow (Schools close for 3 days).
       </p>
 
       
@@ -168,8 +168,8 @@
       </p>
       <p>
         This means:
-        <br>1. <strong>Don't hold your breath in December.</strong> The ground is often too warm for snow to stick.
-        <br>2. <strong>Don't expect a "Miracle March."</strong> Spring is arriving earlier.
+        <br>1. Don't hold your breath in December. The ground is often too warm for snow to stick.
+        <br>2. Don't expect a "Miracle March." Spring is arriving earlier.
       </p>
       <p>
         If you want a snow day, you need to capitalize on the core winter months. If it's February 15th and you haven't had a snow day yet, panic is an appropriate response.
@@ -183,7 +183,7 @@
       </p>
       <p>
         The South (Atlanta, Dallas, Nashville):
-        <br>These cities are actually seeing <em>more</em> volatility. Because they aren't equipped for winter, even a freak polar vortex event (like the Texas Freeze of 2021) shuts down the entire system for a week. The snowdaycalculator probabilities here are wild—swinging from 0% to 100% overnight.
+        <br>These cities are actually seeing <em>more</em> volatility. Because they aren't equipped for winter, even a freak polar vortex event (like the Texas Freeze of 2021) shuts down the entire system for a week. The snowdaycalculator probabilities here are wild  swinging from 0% to 100% overnight.
       </p>
       <p>
         The Mid-Atlantic (DC, Philly, NYC):
