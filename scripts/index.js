@@ -357,11 +357,10 @@ function toggleFAQ(el) {
   ans.style.display = ans.style.display === 'block' ? 'none' : 'block';
 }
 
-/* ========= PDF export ========= */
-function generatePDF() {
+/* ========= PDF Generation Logic ========= */
+function createPDF() {
   if (!currentForecast.length) {
-    alert("Please calculate a forecast first.");
-    return;
+    return null;
   }
 
   const doc   = new jspdf.jsPDF({ orientation: "p", unit: "mm", format: "a4" });
@@ -452,8 +451,105 @@ function generatePDF() {
      .text(after, x, y);
   doc.text(`Generated on: ${new Date().toLocaleString()}`, mX, y+7);
 
+  return doc;
+}
+
+/* ========= PDF export/email ========= */
+function generatePDF() {
+  const doc = createPDF();
+  if (!doc) {
+    alert("Please calculate a forecast first.");
+    return;
+  }
   doc.save("snow-day-report.pdf");
 }
+
+function openEmailModal() {
+  if (!currentForecast.length) {
+    alert("Please calculate a forecast first.");
+    return;
+  }
+  document.getElementById('emailReportModal').style.display = 'flex';
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const emailModal = document.getElementById('emailReportModal');
+    const closeEmailModalBtn = document.getElementById('closeEmailModal');
+    const emailForm = document.getElementById('emailReportForm');
+    const sendEmailBtn = document.getElementById('sendEmailBtn');
+
+    if (emailModal && closeEmailModalBtn && emailForm && sendEmailBtn) {
+        // Close modal via 'X' button
+        closeEmailModalBtn.addEventListener('click', () => {
+            emailModal.style.display = 'none';
+        });
+
+        // Close modal by clicking overlay
+        emailModal.addEventListener('click', (e) => {
+            if (e.target === emailModal) {
+                emailModal.style.display = 'none';
+            }
+        });
+
+        // Handle form submission
+        emailForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const recipientEmail = document.getElementById('recipientEmail').value;
+            const emailMessage = document.getElementById('emailMessage').value;
+            const errorElement = document.getElementById('email-form-error');
+
+            // Basic email validation
+            if (!recipientEmail || !/^\S+@\S+\.\S+$/.test(recipientEmail)) {
+                errorElement.textContent = 'Please enter a valid email address.';
+                errorElement.style.display = 'block';
+                return;
+            }
+            errorElement.style.display = 'none';
+
+            const doc = createPDF();
+            if (!doc) {
+                alert("Error creating PDF. Please try again.");
+                return;
+            }
+
+            // Get PDF as base64
+            const pdfBase64 = doc.output('datauristring').split(',')[1];
+
+            const formData = new FormData();
+            formData.append('email', recipientEmail);
+            formData.append('message', emailMessage);
+            formData.append('pdf', pdfBase64);
+            formData.append('location', currentAddress);
+
+            // Disable button and show sending status
+            sendEmailBtn.disabled = true;
+            sendEmailBtn.querySelector('span').textContent = 'Sending...';
+
+            try {
+                const response = await fetch('/send-report', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const result = await response.json();
+
+                if (response.ok && result.status === 'success') {
+                    alert(result.message);
+                    emailModal.style.display = 'none';
+                    emailForm.reset();
+                } else {
+                    throw new Error(result.message || 'An unknown error occurred while sending the email.');
+                }
+            } catch (error) {
+                alert('Error: ' + error.message);
+            } finally {
+                // Re-enable button
+                sendEmailBtn.disabled = false;
+                sendEmailBtn.querySelector('span').textContent = 'Send Email';
+            }
+        });
+    }
+});
 
 /* ========= JSON-LD Structured Data ========= */
 function injectStructuredData(forecasts, address) {

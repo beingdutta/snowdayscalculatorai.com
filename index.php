@@ -86,6 +86,116 @@
           ]
         }
         </script>
+        <style>
+            /* --- Email Modal Styles --- */
+            #emailReportModal .popup-box {
+                background: #ffffff;
+                border-radius: 12px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+                width: 90%;
+                max-width: 480px;
+                padding: 2rem;
+                border-top: 5px solid rgb(32, 87, 129); /* Theme color */
+                animation: popup-fade-in 0.3s ease-out;
+                text-align: left;
+            }
+
+            @keyframes popup-fade-in {
+                from {
+                    opacity: 0;
+                    transform: translateY(-20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            #emailReportModal .popup-close-btn {
+                top: 1rem;
+                right: 1rem;
+                font-size: 1.8rem;
+                color: #888;
+                transition: color 0.2s;
+            }
+
+            #emailReportModal .popup-close-btn:hover {
+                color: #333;
+            }
+
+            #emailReportModal h3 {
+                display: flex;
+                align-items: center;
+                gap: 0.75rem;
+                font-size: 1.5rem;
+                color: rgb(32, 87, 129); /* Theme color */
+                margin-top: 0;
+                margin-bottom: 0.5rem;
+            }
+
+            #emailReportModal p {
+                color: #555;
+                margin-bottom: 1.5rem;
+                font-size: 0.95rem;
+            }
+
+            #emailReportModal .form-group label {
+                display: block;
+                margin-bottom: 0.5rem;
+                font-weight: 600;
+                color: #444;
+                font-size: 0.9rem;
+            }
+
+            #emailReportModal .form-group input,
+            #emailReportModal .form-group textarea {
+                width: 100%;
+                padding: 0.8rem 1rem;
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                font-size: 1rem;
+                transition: border-color 0.2s, box-shadow 0.2s;
+                box-sizing: border-box;
+            }
+
+            #emailReportModal .form-group input:focus,
+            #emailReportModal .form-group textarea:focus {
+                outline: none;
+                border-color: rgb(54, 162, 235); /* Lighter blue from chart */
+                box-shadow: 0 0 0 3px rgba(54, 162, 235, 0.2);
+            }
+
+            #emailReportModal .popup-buttons {
+                text-align: right;
+                margin-top: 1.5rem;
+            }
+
+            #emailReportModal .popup-btn.primary {
+                background-color: rgb(32, 87, 129); /* Theme color */
+                color: white;
+                padding: 0.8rem 1.5rem;
+                border: none;
+                border-radius: 8px;
+                font-size: 1rem;
+                font-weight: 600;
+                cursor: pointer;
+                transition: background-color 0.2s, transform 0.2s;
+                display: inline-flex;
+                align-items: center;
+                gap: 0.5rem;
+            }
+
+            #emailReportModal .popup-btn.primary:hover {
+                background-color: rgb(42, 107, 159); /* Slightly lighter blue */
+                transform: translateY(-2px);
+            }
+
+            #emailReportModal .popup-btn.primary:disabled {
+                background-color: #999;
+                cursor: not-allowed;
+                transform: none;
+            }
+        </style>
     </head>
 
     <body>
@@ -200,6 +310,10 @@
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16" stroke="currentColor" stroke-width="0.5"><path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/></svg>
                         Download PDF Report
                     </button>
+                    <button onclick="openEmailModal()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/></svg>
+                        Email Report
+                    </button>
                     <button onclick="resetCalculator()">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16" stroke="currentColor" stroke-width="0.5"><path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"/><path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/></svg>
                         Calculate for Another Place
@@ -305,6 +419,35 @@
             </div>
         </div>
         <!-- /container -->
+
+        <!-- Email Modal -->
+        <div id="emailReportModal" class="popup-overlay" style="display: none;">
+            <div class="popup-box">
+                <button class="popup-close-btn" id="closeEmailModal" aria-label="Close">&times;</button>
+                <h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    Email Forecast Report
+                </h3>
+                <p>Send the generated PDF report directly to an email address.</p>
+                <form id="emailReportForm">
+                    <div class="form-group">
+                        <label for="recipientEmail">Recipient's Email</label>
+                        <input type="email" id="recipientEmail" name="email" placeholder="recipient@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="emailMessage">Optional Message</label>
+                        <textarea id="emailMessage" name="message" rows="4" placeholder="e.g., Here is the forecast you asked for!"></textarea>
+                    </div>
+                    <p id="email-form-error" class="form-error" style="display: none;"></p>
+                    <div class="popup-buttons">
+                        <button type="submit" id="sendEmailBtn" class="popup-btn primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                            <span>Send Email</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
 
         <!-- Ad Popup -->
         <div class="popup-overlay" id="adPopupOverlay">
