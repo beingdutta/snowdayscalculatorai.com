@@ -521,31 +521,49 @@ document.addEventListener('DOMContentLoaded', () => {
             formData.append('pdf', pdfBase64);
             formData.append('location', currentAddress);
 
-            // Disable button and show sending status
+            const sendIcon = sendEmailBtn.querySelector('.send-icon');
+            const spinnerIcon = sendEmailBtn.querySelector('.spinner-icon');
+            const buttonText = sendEmailBtn.querySelector('span');
+
+            // --- Start Loading State ---
             sendEmailBtn.disabled = true;
-            sendEmailBtn.querySelector('span').textContent = 'Sending...';
+            if (sendIcon) sendIcon.style.display = 'none';
+            if (spinnerIcon) spinnerIcon.style.display = 'inline-block';
+            if (buttonText) buttonText.textContent = 'Sending...';
 
-            try {
-                const response = await fetch('/send-report', {
-                    method: 'POST',
-                    body: formData
-                });
+            // Create a fake delay promise to ensure loading shows for at least ~7 seconds
+            const fakeDelay = new Promise(resolve => setTimeout(resolve, 7000));
 
+            // Create the actual fetch request promise
+            const sendRequest = fetch('/send-report', {
+                method: 'POST',
+                body: formData
+            }).then(async response => {
                 const result = await response.json();
-
-                if (response.ok && result.status === 'success') {
-                    alert(result.message);
-                    emailModal.style.display = 'none';
-                    emailForm.reset();
-                } else {
+                if (!response.ok || result.status !== 'success') {
+                    // This will be caught by the catch block below
                     throw new Error(result.message || 'An unknown error occurred while sending the email.');
                 }
+                return result;
+            });
+
+            try {
+                // Wait for both the fake delay and the network request to complete
+                const [_, result] = await Promise.all([fakeDelay, sendRequest]);
+
+                // --- Success State ---
+                alert(result.message);
+                emailModal.style.display = 'none';
+                emailForm.reset();
             } catch (error) {
+                // This block will run if sendRequest fails, after fakeDelay is complete.
                 alert('Error: ' + error.message);
             } finally {
-                // Re-enable button
+                // --- Reset Button State ---
                 sendEmailBtn.disabled = false;
-                sendEmailBtn.querySelector('span').textContent = 'Send Email';
+                if (sendIcon) sendIcon.style.display = 'inline-block';
+                if (spinnerIcon) spinnerIcon.style.display = 'none';
+                if (buttonText) buttonText.textContent = 'Send Email';
             }
         });
     }

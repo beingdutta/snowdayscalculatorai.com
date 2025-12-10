@@ -195,6 +195,38 @@
                 cursor: not-allowed;
                 transform: none;
             }
+
+            #emailReportModal .spinner-icon {
+                animation: spin 1s linear infinite;
+            }
+
+            @keyframes spin {
+                from { transform: rotate(0deg); }
+                to { transform: rotate(360deg); }
+            }
+
+            /* --- New Feature Callout --- */
+            .feature-callout {
+                display: flex;
+                align-items: center;
+                gap: 0.75rem;
+                padding: 0.8rem 1rem;
+                background-color: #eef6fc; /* A very light blue, consistent with theme */
+                border-left: 4px solid rgb(54, 162, 235); /* Lighter blue from chart */
+                border-radius: 8px;
+                font-size: 0.9rem;
+                color: #333;
+                margin-top: 1rem; /* Add some space above it */
+            }
+
+            .feature-callout svg {
+                flex-shrink: 0;
+                color: rgb(54, 162, 235);
+            }
+
+            .feature-callout span strong {
+                color: rgb(32, 87, 129); /* Main theme color for emphasis */
+            }
         </style>
     </head>
 
@@ -306,6 +338,10 @@
                 </h2>
                 <div id="forecastResults"></div>
                 <div style="display:flex;flex-direction:column;gap:1rem">
+                    <div class="feature-callout">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/></svg>
+                        <span><strong>Did you know?</strong> You can now email this report straight to your boss, teacher, or friends!</span>
+                    </div>
                     <button onclick="generatePDF()">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16" stroke="currentColor" stroke-width="0.5"><path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/></svg>
                         Download PDF Report
@@ -441,7 +477,8 @@
                     <p id="email-form-error" class="form-error" style="display: none;"></p>
                     <div class="popup-buttons">
                         <button type="submit" id="sendEmailBtn" class="popup-btn primary">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                            <svg class="send-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                            <svg class="spinner-icon" style="display: none;" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>
                             <span>Send Email</span>
                         </button>
                     </div>
