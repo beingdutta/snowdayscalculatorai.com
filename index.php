@@ -500,6 +500,29 @@
             </div>
         </div>
 
+        <!-- Donation Popup -->
+        <div id="donationPopup" class="popup-overlay" style="display: none;">
+            <div class="popup-box">
+                <h3>Support Our Calculator</h3>
+                <p>Do you want to support this calculator by donating?</p>
+                <form id="donationForm" action="save.php" method="POST">
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="answer" value="yes" required>
+                            Yes
+                        </label>
+                        <label>
+                            <input type="radio" name="answer" value="no" required>
+                            No
+                        </label>
+                    </div>
+                    <div class="popup-buttons">
+                        <button type="submit" class="popup-btn primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
         <!-- footer -->
         <?php include __DIR__ . '/navigations/footer.php'; ?>
         <script src="/scripts/index.js"></script>
@@ -582,9 +605,39 @@
                 });
             }
 
+            // 4. Donation Popup Logic
+            document.addEventListener('DOMContentLoaded', () => {
+                const donationPopup = document.getElementById('donationPopup');
+                const donationForm = document.getElementById('donationForm');
+
+                if (donationPopup && donationForm) {
+                    // Show after 10 seconds
+                    setTimeout(() => {
+                        donationPopup.style.display = 'flex';
+                    }, 10000);
+
+                    // Handle submit via AJAX
+                    donationForm.addEventListener('submit', (e) => {
+                        e.preventDefault();
+                        const formData = new FormData(donationForm);
+
+                        fetch('save.php', {
+                            method: 'POST',
+                            body: formData
+                        })
+                        .then(response => response.text())
+                        .then(data => {
+                            // Hide popup on success
+                            donationPopup.style.display = 'none';
+                        })
+                        .catch(error => console.error('Error:', error));
+                    });
+                }
+            });
+
             document.addEventListener('DOMContentLoaded', () => {
                 fetchLocationAndGreet();
-                initializeAdPopup();
+                // initializeAdPopup();
             });
 
             // --- Online Users Counter Logic ---
