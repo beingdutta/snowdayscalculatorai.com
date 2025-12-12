@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="#1 Snow Day Calculator for Schools & Work in the US! Get your most accurate snow day forecast & closure. Skip guesswork with our reliable calculator.">
         <meta name="keywords" content="snow day, snow day calculator, snow day calculator accuweather, snow day college calculator, snow day michigan calculator, snow day chance calculator, snow day accurate calculator, snow day chance calculator, snow day predictor calculator, snow day ai calculator, snow day accurate calculator, snow day app calculator, snow day percentage calculator, snow day probability calculator, snow day calculator free, snow day predictor calculator, snow day best calculator">
-        <title>SnowDay Calculator – Predict School Closures</title>
+        <title>SnowDay Calculator - Predict School Closures</title>
         <link rel="icon" href="/assets/site-icon-apt.png" type="image/x-icon" />
         <link rel="canonical" href="https://snowdayscalculatorai.com/" />
         <link rel="stylesheet" href="/styles/index.css" />
@@ -515,7 +515,7 @@
                     <div class="radio-group" style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 1.5rem;">
                         <label style="cursor: pointer; display: flex; align-items: center; gap: 0.5rem; font-weight: 500; color: #333;">
                             <input type="radio" name="answer" value="yes" required style="accent-color: rgb(32, 87, 129); transform: scale(1.2);">
-                            Yes, absolutely! 
+                            Yes, I'm in! 
                         </label>
                         <label style="cursor: pointer; display: flex; align-items: center; gap: 0.5rem; font-weight: 500; color: #333;">
                             <input type="radio" name="answer" value="no" required style="accent-color: rgb(32, 87, 129); transform: scale(1.2);">
@@ -577,9 +577,19 @@
             let messageIndex = 0;
             let messageInterval;
 
-            // Override the show loader logic to include flashing messages and delay
+            let donationPopupScheduled = false;
+
+            // Controls the delay of the donation popup display after calculation starts
             const originalCalculate = window.calculateProbability;
             window.calculateProbability = async function(...args) {
+                if (!donationPopupScheduled) {
+                    donationPopupScheduled = true;
+                    setTimeout(() => {
+                        const popup = document.getElementById('donationPopup');
+                        if (popup) popup.style.display = 'flex';
+                    }, 17000);
+                }
+
                 messageInterval = setInterval(() => {
                     loaderMessageElement.textContent = loaderMessages[messageIndex % loaderMessages.length];
                     messageIndex++;
@@ -618,11 +628,6 @@
                 const closeDonationPopup = document.getElementById('closeDonationPopup');
 
                 if (donationPopup && donationForm) {
-                    // Show after 12 seconds
-                    setTimeout(() => {
-                        donationPopup.style.display = 'flex';
-                    }, 12000);
-
                     // Close popup when "X" is clicked
                     if (closeDonationPopup) {
                         closeDonationPopup.addEventListener('click', () => {
@@ -633,6 +638,9 @@
                     // Handle submit via AJAX
                     donationForm.addEventListener('submit', (e) => {
                         e.preventDefault();
+                        
+                        // Hide popup immediately
+                        donationPopup.style.display = 'none';
                         
                         const selectedOption = donationForm.querySelector('input[name="answer"]:checked');
                         const answerValue = selectedOption ? selectedOption.value : '';
@@ -647,10 +655,12 @@
                         .then(response => response.text())
                         .then(data => {
                             console.log("Database Save Response:", data);
-                            // Hide popup on success
-                            donationPopup.style.display = 'none';
                         })
                         .catch(error => console.error('Error:', error));
+
+                        if (answerValue === 'yes') {
+                            window.open('/donate.php', '_blank');
+                        }
                     });
                 }
             });

@@ -120,6 +120,7 @@
         <a href="/blogs">Blogs</a>
         <a href="/about">About&nbsp;Us</a>
         <a href="/contact">Contact&nbsp;Us</a>
+        <a href="/donate">Donate&nbsp;Us</a>
     </nav>
     <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle menu" aria-expanded="false">
         <span></span>

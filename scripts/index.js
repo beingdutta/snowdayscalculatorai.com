@@ -115,6 +115,7 @@ function processForecast(periods) {
 /* ========= calculate ========= */
 async function calculateProbability() {
     let addr = addressInput.value.trim();
+    addressInput.style.border = "";
     if (!addr && stateSelect.value && zipcodeInput.value.trim()) {
         addr = `${zipcodeInput.value.trim()}, ${stateSelect.selectedOptions[0].text}`;
     }
@@ -317,6 +318,12 @@ async function calculateProbability() {
         if (e === "Location outside the US") {
             alert("The address you entered is outside the U.S. Please enter a valid U.S. location.");
             resetCalculator(); // Reset UI to initial state for user to try again
+        } else if (e === "Address not found or Invalid Address") {
+            alert(`Error: ${e}`);
+            addressInput.style.border = "2px solid red";
+            addressInput.addEventListener('input', () => {
+                addressInput.style.border = '';
+            }, { once: true });
         } else {
             // For other errors, show an alert and display an error card
             alert(`Error: ${e}`);
