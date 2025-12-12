@@ -502,22 +502,27 @@
 
         <!-- Donation Popup -->
         <div id="donationPopup" class="popup-overlay" style="display: none;">
-            <div class="popup-box">
-                <h3>Support Our Calculator</h3>
-                <p>Do you want to support this calculator by donating?</p>
+            <div class="popup-box" style="text-align: center; max-width: 400px; padding: 1.5rem;">
+                <div style="margin-bottom: 0.5rem; color: rgb(32, 87, 129);">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+                </div>
+                <h3 style="color: rgb(32, 87, 129); margin-bottom: 1rem;">Fuel the Forecast!</h3>
+                <p style="font-size: 1rem; line-height: 1.5; color: #555; margin-bottom: 1.5rem;">
+                    <strong>Would you consider buying us a coffee to keep the predictions free and accurate?</strong>
+                </p>
                 <form id="donationForm" action="save.php" method="POST">
-                    <div class="radio-group">
-                        <label>
-                            <input type="radio" name="answer" value="yes" required>
-                            Yes
+                    <div class="radio-group" style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 1.5rem;">
+                        <label style="cursor: pointer; display: flex; align-items: center; gap: 0.5rem; font-weight: 500; color: #333;">
+                            <input type="radio" name="answer" value="yes" required style="accent-color: rgb(32, 87, 129); transform: scale(1.2);">
+                            Yes, absolutely! 
                         </label>
-                        <label>
-                            <input type="radio" name="answer" value="no" required>
-                            No
+                        <label style="cursor: pointer; display: flex; align-items: center; gap: 0.5rem; font-weight: 500; color: #333;">
+                            <input type="radio" name="answer" value="no" required style="accent-color: rgb(32, 87, 129); transform: scale(1.2);">
+                            Not this time 
                         </label>
                     </div>
-                    <div class="popup-buttons">
-                        <button type="submit" class="popup-btn primary">Submit</button>
+                    <div class="popup-buttons" style="display: flex; justify-content: center; align-items: center;">
+                        <button type="submit" class="popup-btn primary" style="width: 100%; max-width: 200px; font-size: 1.1rem;">Submit Answer</button>
                     </div>
                 </form>
             </div>
@@ -611,22 +616,28 @@
                 const donationForm = document.getElementById('donationForm');
 
                 if (donationPopup && donationForm) {
-                    // Show after 10 seconds
+                    // Show after 12 seconds
                     setTimeout(() => {
                         donationPopup.style.display = 'flex';
-                    }, 10000);
+                    }, 12000);
 
                     // Handle submit via AJAX
                     donationForm.addEventListener('submit', (e) => {
                         e.preventDefault();
-                        const formData = new FormData(donationForm);
+                        
+                        const selectedOption = donationForm.querySelector('input[name="answer"]:checked');
+                        const answerValue = selectedOption ? selectedOption.value : '';
 
-                        fetch('save.php', {
+                        console.log("Sending donation answer:", answerValue);
+
+                        fetch('/save', {
                             method: 'POST',
-                            body: formData
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ answer: answerValue })
                         })
                         .then(response => response.text())
                         .then(data => {
+                            console.log("Database Save Response:", data);
                             // Hide popup on success
                             donationPopup.style.display = 'none';
                         })
